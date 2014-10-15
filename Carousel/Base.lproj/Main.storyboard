@@ -7,7 +7,7 @@
         <!--Intro View Controller-->
         <scene sceneID="QR0-7w-BBQ">
             <objects>
-                <viewController id="e2J-q3-eyd" customClass="IntroViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introViewController" id="e2J-q3-eyd" customClass="IntroViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EvK-Gx-2OV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="t0T-oq-jwE" kind="push" id="qcU-rS-alI"/>
+                                                    <segue destination="t0T-oq-jwE" kind="push" identifier="" id="qcU-rS-alI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -141,7 +141,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="5oX-iv-M5S">
             <objects>
-                <viewController id="t0T-oq-jwE" customClass="SignInViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInViewController" id="t0T-oq-jwE" customClass="SignInViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9KL-Ff-ufL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,7 +565,7 @@
         <!--Settings-->
         <scene sceneID="I9d-4R-qaG">
             <objects>
-                <tableViewController id="dMw-Hd-ciZ" sceneMemberID="viewController">
+                <tableViewController id="dMw-Hd-ciZ" customClass="SettingsViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="30" sectionFooterHeight="30" id="Wgd-if-1Kc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="763"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -753,6 +753,9 @@
                                                         <color key="titleColor" red="0.89019607840000003" green="0.1019607843" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onSignOutButton:" destination="dMw-Hd-ciZ" eventType="touchUpInside" id="IAd-tA-i6Y"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -766,7 +769,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="H0l-fB-Afv">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TJx-Ga-K8Y"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TJx-Ga-K8Y" userLabel="Close">
+                            <connections>
+                                <action selector="onCloseButton:" destination="dMw-Hd-ciZ" id="bvk-O9-Mqq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="763"/>
@@ -778,7 +785,7 @@
         <!--Navigation Controller-->
         <scene sceneID="52Z-5s-Cn3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XCd-NC-RqC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="introNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XCd-NC-RqC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qx8-CV-bXy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
