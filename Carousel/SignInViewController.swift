@@ -23,7 +23,10 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         // Removes bottom shadow on nav bar
-        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        
+        // Don't readjust the help text
+        automaticallyAdjustsScrollViewInsets = false
         
         // Get the original positions of the button and input views
         buttonsViewOrigin = buttonsView.frame.origin
@@ -80,5 +83,8 @@ class SignInViewController: UIViewController {
             self.inputsView.frame.origin = self.inputsViewOrigin!
             }, completion: nil)
     }
-
+    
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
 }

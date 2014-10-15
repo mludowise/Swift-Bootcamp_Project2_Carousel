@@ -111,7 +111,7 @@
                                                 <rect key="frame" x="96" y="46" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenshot1" id="7d5-cd-5Ug">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenshot1" id="7d5-cd-5Ug">
                                                 <rect key="frame" x="1" y="349" width="318" height="214"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -150,7 +150,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="16g-Ue-jyw" userLabel="Help Text">
                                         <rect key="frame" x="10" y="8.5" width="298" height="72.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Carousel uses Dropbox to store your photos and videos so they're safe and available anywhere">
                                                 <attributes>
@@ -181,14 +181,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="Ij3-zS-eQD">
                                         <rect key="frame" x="20" y="154" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </view>
@@ -223,7 +223,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" id="G4k-Hn-GnX">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" shadowImage="navshadow" id="G4k-Hn-GnX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,7 +241,6 @@
                                     <userDefinedRuntimeAttribute type="rect" keyPath="frame">
                                         <rect key="value" x="0.0" y="0.0" width="320" height="64"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="shadowImage" value="UIImage()"/>
                                 </userDefinedRuntimeAttributes>
                             </navigationBar>
                         </subviews>
@@ -258,6 +257,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcu-kg-DqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IPP-iP-EXr">
+                    <connections>
+                        <action selector="onTap:" destination="t0T-oq-jwE" id="KAo-0p-WJA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1543" y="-209"/>
         </scene>
@@ -281,7 +285,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UIImage()" width="320" height="818"/>
         <image name="chevron" width="13" height="21"/>
         <image name="intro_phone" width="320" height="419"/>
         <image name="intro_tile1" width="153" height="152"/>
@@ -291,6 +294,7 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="logo_intro" width="128" height="128"/>
+        <image name="navshadow" width="1" height="1"/>
         <image name="screenshot1" width="318" height="563"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

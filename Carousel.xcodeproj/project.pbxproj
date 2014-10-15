@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */; };
-		E64ABD4E19EE0CDC0091970F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD4D19EE0CDC0091970F /* ViewController.swift */; };
 		E64ABD5119EE0CDC0091970F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64ABD4F19EE0CDC0091970F /* Main.storyboard */; };
 		E64ABD5319EE0CDC0091970F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64ABD5219EE0CDC0091970F /* Images.xcassets */; };
 		E64ABD5619EE0CDC0091970F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64ABD5419EE0CDC0091970F /* LaunchScreen.xib */; };
@@ -31,7 +30,6 @@
 		E64ABD4619EE0CDC0091970F /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64ABD4A19EE0CDC0091970F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E64ABD4D19EE0CDC0091970F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E64ABD5019EE0CDC0091970F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E64ABD5219EE0CDC0091970F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E64ABD5519EE0CDC0091970F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */,
-				E64ABD4D19EE0CDC0091970F /* ViewController.swift */,
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
 				E64ABD6B19EE27AE0091970F /* IntroViewController.swift */,
 				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
@@ -220,7 +217,6 @@
 			files = (
 				E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */,
 				E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */,
-				E64ABD4E19EE0CDC0091970F /* ViewController.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +409,7 @@
 				E64ABD6719EE0CDC0091970F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64ABD6819EE0CDC0091970F /* Build configuration list for PBXNativeTarget "CarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +418,7 @@
 				E64ABD6A19EE0CDC0091970F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
