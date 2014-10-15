@@ -21,12 +21,18 @@ class ImageTimelineViewController: UIViewController {
         
         // Cache screen size
         screenSize = UIScreen.mainScreen().bounds
-        scrollView.contentSize = CGSize(width: 320, height: 1608)
         
-//        scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
+        scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
     }
     
     @IBAction func onBannerXButton(sender: AnyObject) {
-        
+        UIView.animateWithDuration(0.5, animations: {
+            self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
+            }, completion: { (b: Bool) -> Void in
+                UIView.animateWithDuration(0.25, animations: { () -> Void in
+                    self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
+                    self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
+                })
+        })
     }
 }
