@@ -11,7 +11,7 @@ import UIKit
 private let kEmail = "mludowise@gmail.com"
 private let kPassword = "password"
 
-class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate {
+class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     
@@ -25,11 +25,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
     private var buttonsViewOrigin : CGPoint?
     private var screenSize : CGRect?
     
+    private var initialScrollPos : CGPoint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         passwordTextField.delegate = self
         
         // Removes bottom shadow on nav bar
+        // TODO: fix navigation bar shadow
 //        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         
         // Don't readjust the help text
@@ -135,8 +139,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
             dispatch_get_main_queue(), closure)
     }
     
-    @IBAction func onTap(sender: AnyObject) {
+    @IBAction func onTapGesture(sender: AnyObject) {
         dismissKeyboard()
+    }
+    
+    @IBAction func onSwipeGesture(sender: AnyObject) {
+        dismissKeyboard()
+        println("down swipe")
     }
     
     @IBAction func onSignInButton(sender: AnyObject) {

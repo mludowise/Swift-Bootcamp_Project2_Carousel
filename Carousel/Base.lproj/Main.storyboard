@@ -258,6 +258,11 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tOL-Qu-kNB" appends="YES" id="2Xx-MT-MZc"/>
+                            <outletCollection property="gestureRecognizers" destination="tOL-Qu-kNB" appends="YES" id="28z-xP-GLU"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="WP6-fW-LtI"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -272,9 +277,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcu-kg-DqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="IPP-iP-EXr">
+                <swipeGestureRecognizer direction="down" id="tOL-Qu-kNB">
                     <connections>
-                        <action selector="onTap:" destination="t0T-oq-jwE" id="KAo-0p-WJA"/>
+                        <action selector="onSwipeGesture:" destination="t0T-oq-jwE" id="WaY-ea-zfQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="J0a-wk-8KV">
+                    <connections>
+                        <action selector="onTapGesture:" destination="t0T-oq-jwE" id="LK8-tC-qSz"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
