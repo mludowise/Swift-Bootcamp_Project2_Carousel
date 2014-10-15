@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage views, view properties, and events to create a high fidelity prototype that is difficult to distinguish from a production app. We're going to use the techniques from this week to implement the Carousel app from the signed out state to the basic signed in state.
 
-Time Spent: 8 hours and counting...
+Time Spent: 8.5 hours and counting...
 
 Completed User Stories:
 * [x]	Static photo tiles on the initial screen
@@ -12,7 +12,7 @@ Completed User Stories:
   * [x]	User sees an error alert when no email is present or no password is present.
   * [x]	User sees a loading screen upon tapping the Sign In button.
   * [x]	User sees an error alert when entering the wrong email/password combination.
-  * [ ]	User is taken to the tutorial screens upon entering the correct email/password combination.
+  * [x]	User is taken to the tutorial screens upon entering the correct email/password combination.
   * [ ]	Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   * [x]	Optional: On appear, scale the form up and fade it in.
 * [ ]	Optional: Sign Up
