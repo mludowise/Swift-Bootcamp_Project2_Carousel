@@ -465,7 +465,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z8o-ig-Eip">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="468"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="WEx-0P-0Ye" userLabel="Banner">
@@ -537,6 +537,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="7zS-z3-8Yv">
+                                <rect key="frame" x="0.0" y="532" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -554,6 +558,20 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3375" y="-209"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hTl-Kf-fJD">
+            <objects>
+                <viewController id="w4r-7j-AXd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="geL-jF-hV0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rq8-xu-U4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3809" y="-209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="52Z-5s-Cn3">
@@ -588,6 +606,7 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="logo_intro" width="128" height="128"/>
+        <image name="scrubber" width="320" height="36"/>
         <image name="welcome1_cropped" width="320" height="435"/>
         <image name="welcome2_cropped" width="320" height="435"/>
         <image name="welcome3_cropped" width="320" height="435"/>
