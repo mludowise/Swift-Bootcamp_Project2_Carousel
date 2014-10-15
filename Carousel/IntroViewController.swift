@@ -10,20 +10,18 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
-    @IBOutlet weak var introImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var signInButton: UIButton!
+    
+    private let buttonColor = UIColor(red: 28.0/255, green: 172.0/255, blue: 255.0/255, alpha: 1).CGColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSizeMake(320, introImage.image!.size.height)
+        scrollView.contentSize = CGSizeMake(mainView.frame.width, mainView.frame.height)
+        
+        signInButton.layer.borderWidth = 2
+        signInButton.layer.borderColor = buttonColor
     }
-//    
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
-//        scrollView.contentInset.top = 0
-//        scrollView.contentInset.bottom = 50
-//        scrollView.scrollIndicatorInsets.top = 0
-//        scrollView.scrollIndicatorInsets.bottom = 50
-//    }
 }

@@ -12,14 +12,22 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     
-    @IBOutlet weak var buttonsView: UIView!
     @IBOutlet weak var inputsView: UIView!
+    @IBOutlet weak var buttonsView: UIView!
+    @IBOutlet weak var helpText: UITextView!
+    
+    private var inputsViewOrigin : CGPoint?
+    private var buttonsViewOrigin : CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Removes bottom shadow on nav bar
         navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        
+        // Get the original positions of the button and input views
+        buttonsViewOrigin = buttonsView.frame.origin
+        inputsViewOrigin = inputsView.frame.origin
         
         // Setup listeners for keyboard
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -40,11 +48,18 @@ class SignInViewController: UIViewController {
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
+            var screenHeight = UIScreen.mainScreen().bounds.height
             
             // We want the bottom of the buttons to align with the top of the keyboard
-            self.loginComponentsView.frame.origin.y = self.screenHeight! - kbSize.height - self.loginHeight!
+            var buttonsViewHeight = self.buttonsView.frame.height
+            self.buttonsView.frame.origin.y = screenHeight - kbSize.height - buttonsViewHeight
             
-            // We also want the inputs to move up such that the info message is hidden behind the nav (the bottom of the sign in message should be the same as the bottom of the nav) 
+            // We also want the inputs to move up such that the help text is hidden behind the nav (the bottom of the sign in message should be the same as the bottom of the nav)
+            var helpTextY = self.helpText.frame.origin.y
+            var helpTextHeight = self.helpText.frame.height
+            var navBarHeight = self.navigationBar.frame.height
+            self.inputsView.frame.origin.y = navBarHeight - helpTextY - helpTextHeight
+            
             }, completion: nil)
     }
     
@@ -60,9 +75,9 @@ class SignInViewController: UIViewController {
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions.fromRaw(UInt(animationCurve << 16))!, animations: {
-            
-            self.loginComponentsView.frame.origin.y = self.loginYPos!
-            
+            // Reset the y positions back to where they were before
+            self.buttonsView.frame.origin = self.buttonsViewOrigin!
+            self.inputsView.frame.origin = self.inputsViewOrigin!
             }, completion: nil)
     }
 
