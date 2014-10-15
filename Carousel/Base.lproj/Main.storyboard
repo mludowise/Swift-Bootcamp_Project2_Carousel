@@ -527,7 +527,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="dMw-Hd-ciZ" kind="modal" id="Uxh-ip-Wea"/>
+                                                    <segue destination="zXe-oD-ss5" kind="modal" id="Uxh-ip-Wea"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -562,12 +562,12 @@
             </objects>
             <point key="canvasLocation" x="3375" y="-209"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings-->
         <scene sceneID="I9d-4R-qaG">
             <objects>
                 <tableViewController id="dMw-Hd-ciZ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="30" sectionFooterHeight="30" id="Wgd-if-1Kc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="695"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="763"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -765,13 +765,15 @@
                             <outlet property="delegate" destination="dMw-Hd-ciZ" id="quF-z6-uk3"/>
                         </connections>
                     </tableView>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Settings" id="H0l-fB-Afv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TJx-Ga-K8Y"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="695"/>
+                    <size key="freeformSize" width="320" height="763"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsn-Va-cmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3840" y="-145.5"/>
+            <point key="canvasLocation" x="4372" y="-145.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="52Z-5s-Cn3">
@@ -790,6 +792,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VG-Nc-uND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="623" y="-209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HoL-eN-U7Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zXe-oD-ss5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KKa-Yb-ikr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dMw-Hd-ciZ" kind="relationship" relationship="rootViewController" id="V4H-DQ-buK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w5-vJ-lnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3840" y="-146"/>
         </scene>
     </scenes>
     <resources>
