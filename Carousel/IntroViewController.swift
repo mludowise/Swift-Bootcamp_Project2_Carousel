@@ -58,7 +58,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         scrollView!.delegate = self
         
         // Set the signIn button border programatically because you can't do it in storyboard
-        signInButton!.layer.borderWidth = 2
+        signInButton!.layer.borderWidth = 1
         signInButton!.layer.borderColor = kButtonColor
         
         // Set the main view to be below the fold

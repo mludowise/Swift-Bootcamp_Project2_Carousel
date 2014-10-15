@@ -69,6 +69,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
             alertView.dismissWithClickedButtonIndex(0, animated: true)
             if (self.emailTextField.text == kEmail && self.passwordTextField.text == kPassword) {
                 println("Authentication Success!")
+                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier("welcomeViewControler1") as UIViewController
+                self.presentViewController(welcomeViewControler, animated: true, completion: nil)
             } else {
                 alertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password.", delegate: self, cancelButtonTitle: "OK")
                 alertView.show()
