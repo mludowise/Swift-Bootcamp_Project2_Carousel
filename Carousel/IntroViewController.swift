@@ -35,15 +35,15 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         (1.64, CGFloat(-10 * M_PI / 180)),
     ]
     
+    // Points represent the center of the image
     private var tileStartPositions : [CGPoint] = [
-        CGPoint(x: -33, y: 471),
-        CGPoint(x: 208, y: 473),
-        CGPoint(x: 181, y: 379),
-        CGPoint(x: 106, y: 478),
-        CGPoint(x: -14, y: 371),
-        CGPoint(x: 74, y: 386),
+        CGPoint(x: -33 + 153/2, y: 471 + 152/2),
+        CGPoint(x: 208 + 124/2, y: 473 + 122/2),
+        CGPoint(x: 181 + 128/2, y: 379 + 128/2),
+        CGPoint(x: 106 + 121/2, y: 478 + 121/2),
+        CGPoint(x: -14 + 124/2, y: 371 + 122/2),
+        CGPoint(x: 74 + 124/2, y: 386 + 123/2),
     ]
-    
     private var tileEndPositions : [CGPoint] = []
     
     private var screenSize : CGRect?
@@ -71,15 +71,23 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         initializeTiles([tileImage1!, tileImage2!, tileImage3!, tileImage4!, tileImage5!, tileImage6!])
     }
     
-    func getTuple() -> (postiion: CGPoint, size:CGSize, rotation: CGFloat) {
-        return (CGPoint(x: 0, y: 0), CGSize(width: 0, height: 0), CGFloat(0))
-    }
-    
     func initializeTiles(imageViews : [UIImageView]) {
         for (i, imageView) in enumerate(imageViews) {
             tileImageViews.append(imageView)
-            tileEndPositions.append(imageView.frame.origin)
+            tileEndPositions.append(CGPoint(x: imageView.frame.origin.x + imageView.frame.width / 2,
+                y: imageView.frame.origin.y + imageView.frame.height / 2))
+
             transformImage(i, amount: CGFloat(0))
+            
+//            print(i)
+//            print(": x=")
+//            print(imageView.frame.origin.x)
+//            print(", y=")
+//            print(imageView.frame.origin.y)
+//            print(", w=")
+//            print(imageView.frame.width)
+//            print(", h=")
+//            print(imageView.frame.height)
         }
     }
     
@@ -104,18 +112,5 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
             (tileTransform[index].scale - 1) * (1 - amount) + 1,
             (tileTransform[index].scale - 1) * (1 - amount) + 1)
         imageView.transform = CGAffineTransformRotate(imageView.transform, tileTransform[index].rotation  * (1 - amount))
-    }
-    
-    func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
-        
-    }
-    
-    func scrollViewDidEndDragging(scrollView: UIScrollView!,
-        willDecelerate decelerate: Bool) {
-            // This method is called right as the user lifts their finger
-    }
-    
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
-        // This method is called when the scrollview finally stops scrolling.
     }
 }
