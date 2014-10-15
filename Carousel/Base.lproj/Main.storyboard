@@ -216,6 +216,9 @@
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onSignInButton:" destination="t0T-oq-jwE" eventType="touchUpInside" id="oAd-2e-rta"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vha-8F-GJP">
                                         <rect key="frame" x="95" y="83" width="130" height="30"/>
@@ -240,7 +243,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Sign In to Dropbox" id="IdG-Aj-hmp">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron" id="r65-3J-vgu"/>
+                                        <barButtonItem key="leftBarButtonItem" image="chevron" id="r65-3J-vgu">
+                                            <connections>
+                                                <action selector="onBackButton:" destination="t0T-oq-jwE" id="KO3-PP-O4p"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <userDefinedRuntimeAttributes>

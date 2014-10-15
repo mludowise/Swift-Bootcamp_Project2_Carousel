@@ -11,7 +11,7 @@ import UIKit
 private let kEmail = "mludowise@gmail.com"
 private let kPassword = "password"
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     
@@ -27,6 +27,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTextField.delegate = self
         
         // Removes bottom shadow on nav bar
 //        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -46,13 +47,29 @@ class SignInViewController: UIViewController {
         screenSize = UIScreen.mainScreen().bounds
     }
     
-    func signIn() {
-        
-        if (emailTextField.text == kEmail && passwordTextField.text == kPassword) {
-            // We're good to go
-        } else {
-            // Show error
+    func checkPassword() {
+        if (emailTextField.text == "") {
+            var alertView = UIAlertView(title: "Email Required", message: "Please enter your email address.", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+            return
         }
+        if (passwordTextField.text == "") {
+            var alertView = UIAlertView(title: "Password Required", message: "Please enter your password.", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
+            return
+        }
+        
+        var alertView = UIAlertView(title: "Signing in...", message: nil, delegate: self, cancelButtonTitle: nil)
+        alertView.show()
+        delay(2, closure: { () -> () in
+            alertView.dismissWithClickedButtonIndex(0, animated: true)
+            if (self.emailTextField.text == kEmail && self.passwordTextField.text == kPassword) {
+                println("Authentication Success!")
+            } else {
+                alertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password.", delegate: self, cancelButtonTitle: "OK")
+                alertView.show()
+            }
+        })
     }
 
     func keyboardWillShow(notification: NSNotification!) {
@@ -99,7 +116,34 @@ class SignInViewController: UIViewController {
             }, completion: nil)
     }
     
-    @IBAction func onTap(sender: AnyObject) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        checkPassword()
+        dismissKeyboard()
+        return true
+    }
+    
+    func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    @IBAction func onTap(sender: AnyObject) {
+        dismissKeyboard()
+    }
+    
+    @IBAction func onSignInButton(sender: AnyObject) {
+        checkPassword()
+    }
+    
+    @IBAction func onBackButton(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
