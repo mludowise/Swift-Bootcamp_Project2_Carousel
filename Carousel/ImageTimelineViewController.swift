@@ -25,7 +25,7 @@ class ImageTimelineViewController: UIViewController {
         scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
     }
     
-    @IBAction func onBannerXButton(sender: AnyObject) {
+    func dismissBanner() {
         UIView.animateWithDuration(0.5, animations: {
             self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
             }, completion: { (b: Bool) -> Void in
@@ -34,5 +34,13 @@ class ImageTimelineViewController: UIViewController {
                     self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
                 })
         })
+    }
+    
+    @IBAction func onBannerXButton(sender: AnyObject) {
+        dismissBanner()
+    }
+    
+    @IBAction func onBannerSwipe(sender: UISwipeGestureRecognizer) {
+        dismissBanner()
     }
 }

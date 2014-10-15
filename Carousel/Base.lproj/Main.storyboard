@@ -468,7 +468,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="WEx-0P-0Ye">
+                                    <view contentMode="scaleToFill" id="WEx-0P-0Ye" userLabel="Banner">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -496,12 +496,17 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.44705882349999998" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Aoz-Bi-YTY" appends="YES" id="cR8-rc-pHU"/>
+                                        </connections>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="vcw-WW-EWq">
                                         <rect key="frame" x="0.0" y="44" width="320" height="1564"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                             </scrollView>
                             <navigationBar opaque="NO" contentMode="scaleToFill" id="VUp-3X-ONK">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -542,6 +547,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDP-Wi-Yjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Aoz-Bi-YTY">
+                    <connections>
+                        <action selector="onBannerSwipe:" destination="dNQ-np-b4z" id="hiy-kc-7PA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3375" y="-209"/>
         </scene>
