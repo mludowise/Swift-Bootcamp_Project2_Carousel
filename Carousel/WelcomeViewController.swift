@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var welcomeView3: UIView!
     @IBOutlet weak var welcomeView4: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var buttonControlView: UIView!
     
     private var screenSize : CGRect!
     
@@ -40,5 +41,12 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // Fade In Button Controls
+        var alpha = max(0, scrollView.contentOffset.x - screenSize.width * 2) / screenSize.width
+        buttonControlView.alpha = alpha
+        pageControl.alpha = 1-alpha
     }
 }

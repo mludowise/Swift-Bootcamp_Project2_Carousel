@@ -391,7 +391,7 @@
                                                 <rect key="frame" x="0.0" y="80" width="320" height="435"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" id="wMu-9N-ALr" userLabel="Button Controls">
+                                            <view alpha="0.0" contentMode="scaleToFill" id="wMu-9N-ALr" userLabel="Button Controls">
                                                 <rect key="frame" x="0.0" y="467" width="320" height="101"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -440,6 +440,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1280" height="568"/>
                     <connections>
+                        <outlet property="buttonControlView" destination="wMu-9N-ALr" id="aTF-v5-4LG"/>
                         <outlet property="pageControl" destination="xo0-YC-ieU" id="sYb-l0-HxF"/>
                         <outlet property="scrollView" destination="NgS-4P-Jp1" id="g6V-6U-Wbt"/>
                         <outlet property="welcomeView1" destination="i9x-oU-Ehr" id="jmh-oC-Tp5"/>
