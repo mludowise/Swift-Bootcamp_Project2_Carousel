@@ -13,7 +13,7 @@ import UIKit
 internal let kWelcomeViewControllerId = "welcomeViewControler"
 
 
-private let kEmail = "mludowise@gmail.com"
+private let kEmail = "mel@melludowise.com"
 private let kPassword = "password"
 
 private let kEmailRequiredTtl = "Email Required"
