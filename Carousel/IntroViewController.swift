@@ -96,9 +96,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     
     func transformImage(index: Int, amount: CGFloat) {
         var imageView = tileImageViews[index]
+        var mainViewY = mainView!.frame.origin.y
         imageView.transform = CGAffineTransformMakeTranslation(
             (tileStartPositions[index].x - tileEndPositions[index].x) * (1 - amount),
-            (tileStartPositions[index].y - tileEndPositions[index].y - screenSize!.height) * (1 - amount))
+            (tileStartPositions[index].y - tileEndPositions[index].y - mainViewY) * (1 - amount))
         imageView.transform = CGAffineTransformScale(imageView.transform,
             (tileTransform[index].scale - 1) * (1 - amount) + 1,
             (tileTransform[index].scale - 1) * (1 - amount) + 1)
