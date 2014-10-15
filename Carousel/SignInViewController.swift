@@ -8,6 +8,9 @@
 
 import UIKit
 
+private let kEmail = "mludowise@gmail.com"
+private let kPassword = "password"
+
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -18,6 +21,9 @@ class SignInViewController: UIViewController {
     
     private var inputsViewOrigin : CGPoint?
     private var buttonsViewOrigin : CGPoint?
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,15 @@ class SignInViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
 
+    }
+    
+    func signIn() {
+        
+        if (emailTextField.text == kEmail && passwordTextField.text == kPassword) {
+            // We're good to go
+        } else {
+            // Show error
+        }
     }
 
     func keyboardWillShow(notification: NSNotification!) {

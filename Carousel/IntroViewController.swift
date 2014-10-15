@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
@@ -19,9 +19,30 @@ class IntroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSizeMake(mainView.frame.width, mainView.frame.height)
         
+        // Set the signIn button border programatically because you can't do it in storyboard
         signInButton.layer.borderWidth = 2
         signInButton.layer.borderColor = buttonColor
+
+        scrollView.contentSize = CGSizeMake(mainView.frame.width, mainView.frame.height)
+        scrollView.delegate = self
     }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        println(scrollView.contentOffset)
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
+        
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView!,
+        willDecelerate decelerate: Bool) {
+            // This method is called right as the user lifts their finger
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
+        // This method is called when the scrollview finally stops scrolling.
+    }
+
 }

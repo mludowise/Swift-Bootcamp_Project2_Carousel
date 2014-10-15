@@ -223,7 +223,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" shadowImage="navshadow" id="G4k-Hn-GnX">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" id="G4k-Hn-GnX">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -251,9 +251,11 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="buttonsView" destination="BZb-VS-ulh" id="mIJ-lZ-2bM"/>
+                        <outlet property="emailTextField" destination="B4m-Ez-o9F" id="Nkw-ug-FsB"/>
                         <outlet property="helpText" destination="16g-Ue-jyw" id="zUB-Ua-K0u"/>
                         <outlet property="inputsView" destination="reK-5s-BMl" id="0EE-rz-PF2"/>
                         <outlet property="navigationBar" destination="G4k-Hn-GnX" id="tFS-il-Y9x"/>
+                        <outlet property="passwordTextField" destination="Ij3-zS-eQD" id="dit-Gd-f3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcu-kg-DqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -294,7 +296,6 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="logo_intro" width="128" height="128"/>
-        <image name="navshadow" width="1" height="1"/>
         <image name="screenshot1" width="318" height="563"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
