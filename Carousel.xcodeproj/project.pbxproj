@@ -14,6 +14,8 @@
 		E64ABD6219EE0CDC0091970F /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6119EE0CDC0091970F /* CarouselTests.swift */; };
 		E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6B19EE27AE0091970F /* IntroViewController.swift */; };
 		E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6D19EE37810091970F /* SignInViewController.swift */; };
+		E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */; };
+		E6DC0A5519EF06CA009BAC21 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5419EF06CA009BAC21 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		E64ABD6119EE0CDC0091970F /* CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTests.swift; sourceTree = "<group>"; };
 		E64ABD6B19EE27AE0091970F /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E64ABD6D19EE37810091970F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E6DC0A5419EF06CA009BAC21 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
 				E64ABD6B19EE27AE0091970F /* IntroViewController.swift */,
 				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
+				E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */,
+				E6DC0A5419EF06CA009BAC21 /* PageViewController.swift */,
 				E64ABD5219EE0CDC0091970F /* Images.xcassets */,
 				E64ABD5419EE0CDC0091970F /* LaunchScreen.xib */,
 				E64ABD4919EE0CDC0091970F /* Supporting Files */,
@@ -216,6 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */,
+				E6DC0A5519EF06CA009BAC21 /* PageViewController.swift in Sources */,
+				E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */,
 				E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 			);

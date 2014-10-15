@@ -8,8 +8,22 @@
 
 import UIKit
 
+
+// Corresponds to the ID given to this controller on the storyboard
+internal let kWelcomeViewControllerId = "welcomeViewControler"
+
+
 private let kEmail = "mludowise@gmail.com"
 private let kPassword = "password"
+
+private let kEmailRequiredTtl = "Email Required"
+private let kEmailRequiredMsg = "Please enter your email address."
+private let kPassRequiredTtl = "Password Required"
+private let kPassRequiredMsg = "Please enter your password."
+private let kSigningInTtl = "Signing in..."
+private let kSignInFailTtl = "Sign In Failed"
+private let kSignInFailMsg = "Incorrect Email or Password."
+private let kOkButtonTxt = "OK"
 
 class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate, UIScrollViewDelegate {
 
@@ -53,26 +67,25 @@ class SignInViewController: UIViewController, UITextFieldDelegate, UIAlertViewDe
     
     func checkPassword() {
         if (emailTextField.text == "") {
-            var alertView = UIAlertView(title: "Email Required", message: "Please enter your email address.", delegate: self, cancelButtonTitle: "OK")
+            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         if (passwordTextField.text == "") {
-            var alertView = UIAlertView(title: "Password Required", message: "Please enter your password.", delegate: self, cancelButtonTitle: "OK")
+            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         
-        var alertView = UIAlertView(title: "Signing in...", message: nil, delegate: self, cancelButtonTitle: nil)
+        var alertView = UIAlertView(title: kSigningInTtl, message: nil, delegate: self, cancelButtonTitle: nil)
         alertView.show()
         delay(2, closure: { () -> () in
             alertView.dismissWithClickedButtonIndex(0, animated: true)
             if (self.emailTextField.text == kEmail && self.passwordTextField.text == kPassword) {
-                println("Authentication Success!")
-                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier("welcomeViewControler1") as UIViewController
+                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
                 self.presentViewController(welcomeViewControler, animated: true, completion: nil)
             } else {
-                alertView = UIAlertView(title: "Sign In Failed", message: "Incorrect Email or Password.", delegate: self, cancelButtonTitle: "OK")
+                alertView = UIAlertView(title: kSignInFailTtl, message: kSignInFailMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
                 alertView.show()
             }
         })
