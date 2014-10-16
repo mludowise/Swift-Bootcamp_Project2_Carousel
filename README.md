@@ -16,10 +16,10 @@ Completed User Stories:
   * [ ]	Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   * [x]	Optional: On appear, scale the form up and fade it in.
 * [ ]	Optional: Sign Up
-  * [ ]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
+  * [x]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
   * [ ]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
   * [ ]	Optional: Tapping on Terms shows a webview with the terms.
-  * [ ]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
+  * [x]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
 * [x]	Tutorial Screens
   * [x]	User can page between the screens
   * [x]	Optional: User can page between the screens with updated dots
