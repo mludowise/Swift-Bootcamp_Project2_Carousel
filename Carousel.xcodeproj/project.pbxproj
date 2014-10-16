@@ -17,6 +17,7 @@
 		E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */; };
 		E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */; };
 		E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */; };
+		E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */,
 				E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */,
 				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
+				E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */,
 				E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */,
 				E64ABD5219EE0CDC0091970F /* Images.xcassets */,
 				E64ABD5419EE0CDC0091970F /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 			files = (
 				E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */,
 				E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */,
+				E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */,
 				E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 				E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */,

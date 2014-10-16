@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dNQ-np-b4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Vaa-fp-2aE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -374,19 +374,6 @@
                                         <rect key="frame" x="960" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="wFb-dD-wwE" userLabel="Help Text">
-                                                <rect key="frame" x="30" y="30" width="261.5" height="62.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Automatically back up your photos to Dropbox">
-                                                        <attributes>
-                                                            <font key="NSFont" size="21" name="HiraKakuProN-W3"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.59999999999999998"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome4_cropped" id="G7N-mi-DOQ">
                                                 <rect key="frame" x="0.0" y="80" width="320" height="435"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,7 +408,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="dNQ-np-b4z" kind="modal" modalTransitionStyle="crossDissolve" id="WHH-FU-SJM"/>
+                                                            <segue destination="Vaa-fp-2aE" kind="modal" modalTransitionStyle="crossDissolve" id="WHH-FU-SJM"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -454,9 +441,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGX-Os-hVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2467" y="-209"/>
+            <point key="canvasLocation" x="1103" y="1335"/>
         </scene>
-        <!--Image Timeline View Controller-->
+        <!--Carousel-->
         <scene sceneID="o95-ua-EBq">
             <objects>
                 <viewController id="dNQ-np-b4z" customClass="ImageTimelineViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
@@ -465,7 +452,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z8o-ig-Eip">
-                                <rect key="frame" x="0.0" y="64" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="532"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="WEx-0P-0Ye" userLabel="Banner">
@@ -508,38 +495,6 @@
                                 </subviews>
                                 <gestureRecognizers/>
                             </scrollView>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" id="VUp-3X-ONK">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="18"/>
-                                    <color key="textShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="5"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Carousel" id="w5t-qN-hbo">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="7Fh-27-lcv" userLabel="Messages Bar Button">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VS-By-7O1" userLabel="Messages Button">
-                                                <rect key="frame" x="128" y="177" width="32" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="avatar">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="zXe-oD-ss5" kind="modal" id="Uxh-ip-Wea"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="icon_messages" id="y87-5I-RVQ" userLabel="Messages Button"/>
-                                    </navigationItem>
-                                </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
-                                        <rect key="value" x="0.0" y="0.0" width="320" height="64"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="7zS-z3-8Yv">
                                 <rect key="frame" x="0.0" y="532" width="320" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -547,6 +502,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Carousel" id="bEg-E0-POB">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="7Fh-27-lcv" userLabel="Messages Bar Button">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VS-By-7O1" userLabel="Messages Button">
+                                <rect key="frame" x="128" y="177" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="avatar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zXe-oD-ss5" kind="modal" id="Uxh-ip-Wea"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon_messages" id="y87-5I-RVQ" userLabel="Messages Button">
+                            <connections>
+                                <segue destination="6Fv-B4-IGg" kind="push" id="uTY-zR-cXb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="banner" destination="WEx-0P-0Ye" id="3U9-h3-fBh"/>
                         <outlet property="feedView" destination="vcw-WW-EWq" id="cnP-GI-YlD"/>
@@ -560,7 +534,41 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3375" y="-209"/>
+            <point key="canvasLocation" x="1155" y="2235"/>
+        </scene>
+        <!--Conversations-->
+        <scene sceneID="lGd-8o-HFu">
+            <objects>
+                <viewController id="6Fv-B4-IGg" customClass="ConversationsViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yvH-OV-Vfj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conversations_cropped" id="DWS-Hb-Hhw">
+                                <rect key="frame" x="0.0" y="71" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" text="Your conversations will be here when you share with friends." textAlignment="center" selectable="NO" id="wFb-dD-wwE" userLabel="Help Text">
+                                <rect key="frame" x="24" y="151" width="272" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conversations" id="pHt-c0-QWM">
+                        <barButtonItem key="leftBarButtonItem" image="chevron" id="NT9-rY-njK">
+                            <connections>
+                                <action selector="onBackButton:" destination="6Fv-B4-IGg" id="sJS-Sp-5sV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drk-5p-yMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="2235"/>
         </scene>
         <!--Settings-->
         <scene sceneID="I9d-4R-qaG">
@@ -780,7 +788,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsn-Va-cmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4372" y="-145.5"/>
+            <point key="canvasLocation" x="1152" y="3103.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="52Z-5s-Cn3">
@@ -803,6 +811,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HoL-eN-U7Q">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w5-vJ-lnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zXe-oD-ss5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KKa-Yb-ikr">
@@ -814,15 +823,33 @@
                         <segue destination="dMw-Hd-ciZ" kind="relationship" relationship="rootViewController" id="V4H-DQ-buK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5w5-vJ-lnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3840" y="-146"/>
+            <point key="canvasLocation" x="623" y="3006"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qq5-mV-ctE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vaa-fp-2aE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beG-ux-HVB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dNQ-np-b4z" kind="relationship" relationship="rootViewController" id="R7c-B1-cCD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0G-Mh-i00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="2235"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatar" width="87" height="87"/>
         <image name="banner_cropped" width="55" height="44"/>
         <image name="chevron" width="13" height="21"/>
+        <image name="conversations_cropped" width="320" height="60"/>
         <image name="feed" width="320" height="1564"/>
         <image name="icon_messages" width="31" height="25"/>
         <image name="intro_phone" width="320" height="419"/>
