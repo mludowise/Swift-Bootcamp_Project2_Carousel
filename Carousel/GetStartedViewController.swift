@@ -8,9 +8,9 @@
 
 import UIKit
 
-internal var getStartedViewPhoto = false
+internal var getStartedViewPhoto = true
 internal var getStartedUseTimeWheel = false
-internal var getStartedSharePhoto = false
+internal var getStartedSharePhoto = true
 
 class GetStartedViewController: UIViewController {
 
@@ -36,6 +36,6 @@ class GetStartedViewController: UIViewController {
     }
 }
 
-func shouldShowLearnMoreBanner() -> Bool {
+func shouldHideLearnMoreBanner() -> Bool {
     return getStartedViewPhoto && getStartedUseTimeWheel && getStartedSharePhoto
 }

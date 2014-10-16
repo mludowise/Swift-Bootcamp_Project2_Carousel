@@ -34,16 +34,12 @@ class ImageTimelineViewController: UIViewController {
             self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
             }, completion: { (b: Bool) -> Void in
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
-                    if (!shouldShowLearnMoreBanner()) {
-                        self.hideBanner()
+                    if (shouldHideLearnMoreBanner()) {
+                        self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
+                        self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
                     }
                 })
         })
-    }
-    
-    func hideBanner() {
-        self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
-        self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
     }
     
     @IBAction func onBannerXButton(sender: AnyObject) {
@@ -70,7 +66,17 @@ class ImageTimelineViewController: UIViewController {
         newScrollPos = max(newScrollPos, -navBarHeight)
         scrollView.contentOffset.y = newScrollPos
         
+        
+        if (recognizer.state == UIGestureRecognizerState.Ended) {
+            println("end")
+        }
         // Mark that we've used the timewheel for the Get started page
-        getStartedUseTimeWheel = true
+        if (recognizer.state == UIGestureRecognizerState.Ended && !getStartedUseTimeWheel) {
+            getStartedUseTimeWheel = true
+            print("checking banner")
+            if (shouldHideLearnMoreBanner()) {
+                dismissBanner()
+            }
+        }
     }
 }
