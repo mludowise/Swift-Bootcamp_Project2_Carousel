@@ -71,10 +71,6 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         initializeTiles([tileImage1!, tileImage2!, tileImage3!, tileImage4!, tileImage5!, tileImage6!])
     }
     
-    override func viewWillAppear(animated: Bool) {
-//        <#code#>
-    }
-    
     func initializeTiles(imageViews : [UIImageView]) {
         for (i, imageView) in enumerate(imageViews) {
             tileImageViews.append(imageView)

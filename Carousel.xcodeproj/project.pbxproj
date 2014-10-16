@@ -14,6 +14,8 @@
 		E64ABD6219EE0CDC0091970F /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6119EE0CDC0091970F /* CarouselTests.swift */; };
 		E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6B19EE27AE0091970F /* IntroViewController.swift */; };
 		E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6D19EE37810091970F /* SignInViewController.swift */; };
+		E67D50FD19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */; };
+		E67D50FF19EF5DF800ABA6EB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D50FE19EF5DF800ABA6EB /* Util.swift */; };
 		E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */; };
 		E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */; };
 		E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */; };
@@ -21,6 +23,7 @@
 		E6DC0A5F19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */; };
 		E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */; };
 		E6DC0A6319EF54FC009BAC21 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */; };
+		E6DC0A6719EF566F009BAC21 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6619EF566F009BAC21 /* StoryboardConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 		E64ABD6119EE0CDC0091970F /* CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTests.swift; sourceTree = "<group>"; };
 		E64ABD6B19EE27AE0091970F /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E64ABD6D19EE37810091970F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceViewController.swift; sourceTree = "<group>"; };
+		E67D50FE19EF5DF800ABA6EB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveWithKeyboardViewController.swift; path = ../MoveWithKeyboardViewController.swift; sourceTree = "<group>"; };
 		E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		E6DC0A6619EF566F009BAC21 /* StoryboardConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 		E64ABD3D19EE0CDC0091970F = {
 			isa = PBXGroup;
 			children = (
+				E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */,
 				E64ABD4819EE0CDC0091970F /* Carousel */,
 				E64ABD5E19EE0CDC0091970F /* CarouselTests */,
 				E64ABD4719EE0CDC0091970F /* Products */,
@@ -96,14 +103,16 @@
 				E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */,
 				E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */,
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
-				E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */,
 				E64ABD6B19EE27AE0091970F /* IntroViewController.swift */,
 				E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */,
 				E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */,
-				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
 				E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */,
+				E67D50FE19EF5DF800ABA6EB /* Util.swift */,
 				E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */,
 				E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */,
+				E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */,
+				E6DC0A6619EF566F009BAC21 /* StoryboardConstants.swift */,
+				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
 				E64ABD5219EE0CDC0091970F /* Images.xcassets */,
 				E64ABD5419EE0CDC0091970F /* LaunchScreen.xib */,
 				E64ABD4919EE0CDC0091970F /* Supporting Files */,
@@ -237,10 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */,
+				E67D50FD19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift in Sources */,
 				E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */,
 				E6DC0A5F19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift in Sources */,
 				E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */,
 				E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */,
+				E6DC0A6719EF566F009BAC21 /* StoryboardConstants.swift in Sources */,
+				E67D50FF19EF5DF800ABA6EB /* Util.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 				E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */,
 				E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */,

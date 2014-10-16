@@ -8,10 +8,6 @@
 
 import UIKit
 
-private let kSignInViewControllerID = "signInViewController"
-private let kIntroNavigationControllerID = "introNavigationController"
-private let kIntroViewControllerID = "introViewController"
-
 class SettingsViewController: UITableViewController {
 
     override func viewDidLoad() {

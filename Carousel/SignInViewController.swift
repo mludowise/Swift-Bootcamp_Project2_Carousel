@@ -9,8 +9,6 @@
 import UIKit
 
 // Corresponds to the ID given to this controller on the storyboard
-private let kWelcomeViewControllerId = "welcomeViewControler"
-
 private let kEmail = "mel@melludowise.com"
 private let kPassword = "password"
 
@@ -54,7 +52,7 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         
         var alertView = UIAlertView(title: kSigningInTtl, message: nil, delegate: self, cancelButtonTitle: nil)
         alertView.show()
-        delay(2, closure: { () -> () in
+        delay(2, { () -> () in
             alertView.dismissWithClickedButtonIndex(0, animated: true)
             if (self.emailTextField.text == kEmail && self.passwordTextField.text == kPassword) {
                 var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
@@ -70,15 +68,6 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         checkPassword()
         dismissKeyboard()
         return true
-    }
-    
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
     }
     
     @IBAction func onTapGesture(sender: AnyObject) {

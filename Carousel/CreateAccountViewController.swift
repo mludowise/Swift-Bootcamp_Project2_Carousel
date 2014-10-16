@@ -37,8 +37,43 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     }
     
     func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
-        // buttonIndex is 0 for Cancel
-        // buttonIndex ranges from 1-n for the other buttons.
+        if (buttonIndex == 0) { // I Agree
+            checkFields()
+        } else { // View Terms
+            var termsOfServiceController = storyboard?.instantiateViewControllerWithIdentifier(termsOfServiceViewControllerID) as UIViewController
+            presentViewController(termsOfServiceController, animated: true, completion: nil)
+        }
+    }
+    
+    func checkFields() {
+        if (firstNameField.text == "") {
+            var alertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            alertView.show()
+            return
+        }
+        if (lastNameField.text == "") {
+            var alertView = UIAlertView(title: kLastNameRequiredTtl, message: kLastNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            alertView.show()
+            return
+        }
+        if (emailField.text == "") {
+            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            alertView.show()
+            return
+        }
+        if (passwordField.text == "") {
+            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            alertView.show()
+            return
+        }
+        
+        var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
+        alertView.show()
+        delay(2, { () -> () in
+            alertView.dismissWithClickedButtonIndex(0, animated: true)
+            var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
+            self.presentViewController(welcomeViewControler, animated: true, completion: nil)
+        })
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

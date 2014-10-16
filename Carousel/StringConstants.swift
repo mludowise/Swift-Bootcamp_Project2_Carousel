@@ -17,6 +17,8 @@ internal let kEmailRequiredMsg = "Please enter your email address."
 internal let kPassRequiredTtl = "Password Required"
 internal let kPassRequiredMsg = "Please enter your password."
 
+internal let kCreatingAccountTtl = "Creating Account..."
+
 internal let kSigningInTtl = "Signing in..."
 internal let kSignInFailTtl = "Sign In Failed"
 internal let kSignInFailMsg = "Incorrect Email or Password."
