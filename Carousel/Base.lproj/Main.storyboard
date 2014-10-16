@@ -416,6 +416,19 @@
                                                     </button>
                                                 </subviews>
                                             </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="Dtw-ta-6gg" userLabel="Help Text">
+                                                <rect key="frame" x="21" y="30" width="261.5" height="62.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Automatically back up your photos to Dropbox">
+                                                        <attributes>
+                                                            <font key="NSFont" size="21" name="HiraKakuProN-W3"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.59999999999999998"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
