@@ -81,5 +81,9 @@ class MoveWithKeyboardViewController: UIViewController {
             self.inputsView.frame.origin = self.inputsViewOrigin!
             }, completion: nil)
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 }

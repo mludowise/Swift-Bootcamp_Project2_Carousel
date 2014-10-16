@@ -8,22 +8,11 @@
 
 import UIKit
 
-
 // Corresponds to the ID given to this controller on the storyboard
-internal let kWelcomeViewControllerId = "welcomeViewControler"
-
+private let kWelcomeViewControllerId = "welcomeViewControler"
 
 private let kEmail = "mel@melludowise.com"
 private let kPassword = "password"
-
-private let kEmailRequiredTtl = "Email Required"
-private let kEmailRequiredMsg = "Please enter your email address."
-private let kPassRequiredTtl = "Password Required"
-private let kPassRequiredMsg = "Please enter your password."
-private let kSigningInTtl = "Signing in..."
-private let kSignInFailTtl = "Sign In Failed"
-private let kSignInFailMsg = "Incorrect Email or Password."
-private let kOkButtonTxt = "OK"
 
 class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate, UIAlertViewDelegate {
 
@@ -81,10 +70,6 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         checkPassword()
         dismissKeyboard()
         return true
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
     }
     
     func delay(delay:Double, closure:()->()) {

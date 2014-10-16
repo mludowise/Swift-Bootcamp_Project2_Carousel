@@ -20,6 +20,7 @@
 		E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */; };
 		E6DC0A5F19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */; };
 		E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */; };
+		E6DC0A6319EF54FC009BAC21 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveWithKeyboardViewController.swift; path = ../MoveWithKeyboardViewController.swift; sourceTree = "<group>"; };
 		E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */,
 				E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */,
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
+				E6DC0A6219EF54FB009BAC21 /* StringConstants.swift */,
 				E64ABD6B19EE27AE0091970F /* IntroViewController.swift */,
 				E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */,
 				E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */,
@@ -241,6 +244,7 @@
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 				E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */,
 				E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */,
+				E6DC0A6319EF54FC009BAC21 /* StringConstants.swift in Sources */,
 				E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
