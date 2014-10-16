@@ -23,6 +23,7 @@ class ImageTimelineViewController: UIViewController {
         screenSize = UIScreen.mainScreen().bounds
         
         scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
+        
     }
     
     func dismissBanner() {
@@ -30,10 +31,16 @@ class ImageTimelineViewController: UIViewController {
             self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
             }, completion: { (b: Bool) -> Void in
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
-                    self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
-                    self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
+                    if (!shouldShowLearnMoreBanner()) {
+                        self.hideBanner()
+                    }
                 })
         })
+    }
+    
+    func hideBanner() {
+        self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
+        self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
     }
     
     @IBAction func onBannerXButton(sender: AnyObject) {
@@ -42,5 +49,5 @@ class ImageTimelineViewController: UIViewController {
     
     @IBAction func onBannerSwipe(sender: UISwipeGestureRecognizer) {
         dismissBanner()
-    }
+    }    
 }

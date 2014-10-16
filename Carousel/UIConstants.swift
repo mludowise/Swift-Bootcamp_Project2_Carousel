@@ -13,3 +13,5 @@ internal let kWelcomeViewControllerId = "welcomeViewControler"
 internal let kSignInViewControllerID = "signInViewController"
 internal let kIntroNavigationControllerID = "introNavigationController"
 internal let kIntroViewControllerID = "introViewController"
+
+internal let kCheckboxComplete = "checkbox_complete"

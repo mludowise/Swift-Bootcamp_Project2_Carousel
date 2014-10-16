@@ -31,14 +31,15 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         setupKeyboardMovement(inputsView, buttonsView: ButtonsView, helpText: helpText, navigationBar: navigationBar)
     }
     
-    func showTerms() {
-        var alertView = UIAlertView(title: "", message: kTermsMsg, delegate: self, cancelButtonTitle: kAgreeButtonTxt, otherButtonTitles: kViewTermsButtonTxt)
-        alertView.show()
-    }
-    
     func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
         if (buttonIndex == 0) { // I Agree
-            checkFields()
+            var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
+            alertView.show()
+            delay(2, { () -> () in
+                alertView.dismissWithClickedButtonIndex(0, animated: true)
+                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
+                self.presentViewController(welcomeViewControler, animated: true, completion: nil)
+            })
         } else { // View Terms
             var termsOfServiceController = storyboard?.instantiateViewControllerWithIdentifier(termsOfServiceViewControllerID) as UIViewController
             presentViewController(termsOfServiceController, animated: true, completion: nil)
@@ -47,43 +48,39 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     
     func checkFields() {
         if (firstNameField.text == "") {
-            var alertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            var alertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         if (lastNameField.text == "") {
-            var alertView = UIAlertView(title: kLastNameRequiredTtl, message: kLastNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            var alertView = UIAlertView(title: kLastNameRequiredTtl, message: kLastNameRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         if (emailField.text == "") {
-            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         if (passwordField.text == "") {
-            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
             return
         }
         
-        var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
+        var alertView = UIAlertView(title: "", message: kTermsMsg, delegate: self, cancelButtonTitle: kAgreeButtonTxt, otherButtonTitles: kViewTermsButtonTxt)
         alertView.show()
-        delay(2, { () -> () in
-            alertView.dismissWithClickedButtonIndex(0, animated: true)
-            var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
-            self.presentViewController(welcomeViewControler, animated: true, completion: nil)
-        })
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        showTerms()
         dismissKeyboard()
+        checkFields()
         return true
     }
     
     @IBAction func onCreateButton(sender: AnyObject) {
-        showTerms()
+        dismissKeyboard()
+        checkFields()
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
