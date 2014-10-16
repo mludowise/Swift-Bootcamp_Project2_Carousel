@@ -18,6 +18,8 @@
 		E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */; };
 		E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */; };
 		E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */; };
+		E6DC0A5F19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */; };
+		E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveWithKeyboardViewController.swift; path = ../MoveWithKeyboardViewController.swift; sourceTree = "<group>"; };
+		E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +91,14 @@
 		E64ABD4819EE0CDC0091970F /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */,
 				E64ABD4B19EE0CDC0091970F /* AppDelegate.swift */,
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
 				E64ABD6B19EE27AE0091970F /* IntroViewController.swift */,
 				E6DC0A5619EF226D009BAC21 /* ImageTimelineViewController.swift */,
 				E6DC0A5219EEFD1D009BAC21 /* WelcomeViewController.swift */,
 				E64ABD4F19EE0CDC0091970F /* Main.storyboard */,
+				E6DC0A6019EF4BD4009BAC21 /* CreateAccountViewController.swift */,
 				E6DC0A5A19EF4147009BAC21 /* ConversationsViewController.swift */,
 				E6DC0A5819EF3963009BAC21 /* SettingsViewController.swift */,
 				E64ABD5219EE0CDC0091970F /* Images.xcassets */,
@@ -229,9 +235,11 @@
 			files = (
 				E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */,
 				E6DC0A5319EEFD1D009BAC21 /* WelcomeViewController.swift in Sources */,
+				E6DC0A5F19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift in Sources */,
 				E6DC0A5B19EF4147009BAC21 /* ConversationsViewController.swift in Sources */,
 				E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
+				E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */,
 				E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */,
 				E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */,
 			);
