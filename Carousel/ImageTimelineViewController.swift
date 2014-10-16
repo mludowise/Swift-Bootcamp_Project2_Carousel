@@ -13,8 +13,11 @@ class ImageTimelineViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var feedView: UIImageView!
+    @IBOutlet weak var scrubberImage: UIImageView!
     
     private var screenSize : CGRect!
+    
+    private var startScrollPos : CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ImageTimelineViewController: UIViewController {
         screenSize = UIScreen.mainScreen().bounds
         
         scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
-        
+//        scrubberImage.userInteractionEnabled = true
     }
     
     func dismissBanner() {
@@ -49,5 +52,23 @@ class ImageTimelineViewController: UIViewController {
     
     @IBAction func onBannerSwipe(sender: UISwipeGestureRecognizer) {
         dismissBanner()
-    }    
+    }
+    
+    @IBAction func onScrubberPanGesture(recognizer: UIPanGestureRecognizer) {
+        if (recognizer.state == UIGestureRecognizerState.Began) {
+            startScrollPos = scrollView.contentOffset.y
+        }
+        
+        var translation = recognizer.translationInView(scrubberImage)
+        var scrollableHeight = scrollView.contentSize.height - screenSize.height
+        var ratio = translation.x / scrubberImage.frame.width
+        var offset = ratio * scrollableHeight
+        var newScrollPos = startScrollPos + offset
+        newScrollPos = min(newScrollPos, scrollableHeight)
+        newScrollPos = max(newScrollPos, 0)
+        scrollView.contentOffset.y = newScrollPos
+        
+        // Mark that we've used the timewheel for the Get started page
+        getStartedUseTimeWheel = true
+    }
 }
