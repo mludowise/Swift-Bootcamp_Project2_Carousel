@@ -9,13 +9,7 @@
 import UIKit
 
 class TermsOfServiceViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
+    
     @IBAction func onDoneButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }

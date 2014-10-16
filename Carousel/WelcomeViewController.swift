@@ -28,7 +28,6 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         screenSize = UIScreen.mainScreen().bounds
         
         scrollView.contentSize = CGSize(width: screenSize.width * 4, height: screenSize.height)
-        println(scrollView.contentSize)
         welcomeView1.frame.size.width = screenSize.width
         welcomeView2.frame.size.width = screenSize.width
         welcomeView3.frame.size.width = screenSize.width
