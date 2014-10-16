@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage views, view properties, and events to create a high fidelity prototype that is difficult to distinguish from a production app. We're going to use the techniques from this week to implement the Carousel app from the signed out state to the basic signed in state.
 
-Time Spent: 12.5 hours and counting...
+Time Spent: 13 hours and counting...
 
 Completed User Stories:
 * [x]	Static photo tiles on the initial screen
@@ -24,9 +24,9 @@ Completed User Stories:
   * [x]	User can page between the screens
   * [x]	Optional: User can page between the screens with updated dots
   * [x]	Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
-* [ ]	Image Timeline
+* [x]	Image Timeline
   * [x]	Display a scrollable view of images.
-  * [ ]	User can tap on the conversations button to see the conversations screen (push).
+  * [x]	User can tap on the conversations button to see the conversations screen (push).
   * [x]	User can tap on the profile image to see the settings view (modal from below).
 * [x]	Settings
   * [x]	User can dismiss the settings screen.
