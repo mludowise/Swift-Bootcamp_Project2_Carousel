@@ -503,13 +503,10 @@
                                 </subviews>
                                 <gestureRecognizers/>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="7zS-z3-8Yv">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="7zS-z3-8Yv">
                                 <rect key="frame" x="0.0" y="532" width="320" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="userInteractionEnabled" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WoD-mR-CXX" appends="YES" id="OR9-vX-Tfq"/>
                                 </connections>
@@ -536,7 +533,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="banner" destination="WEx-0P-0Ye" id="3U9-h3-fBh"/>
                         <outlet property="feedView" destination="vcw-WW-EWq" id="cnP-GI-YlD"/>
