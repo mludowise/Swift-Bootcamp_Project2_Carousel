@@ -8,6 +8,10 @@
 
 import UIKit
 
+internal var getStartedViewPhoto = false
+internal var getStartedUseTimeWheel = false
+internal var getStartedSharePhoto = false
+
 class ImageTimelineViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -20,8 +24,8 @@ class ImageTimelineViewController: UIViewController {
     @IBOutlet var backgroundTapGestureRecognizer: UITapGestureRecognizer!
     
     private var screenSize : CGRect!
-    
     private var startScrollPos : CGFloat!
+    private var thumbnailImageView : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +34,12 @@ class ImageTimelineViewController: UIViewController {
         screenSize = UIScreen.mainScreen().bounds
         
         // Size scrollview
-        scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height + banner.frame.height)
+        scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height)
+        
+        if (checkIfCompletedAllGetStartedTasks()) {
+            self.banner.hidden = true
+            self.scrollView.frame.origin.y = 0
+        }
     }
     
     func dismissBanner() {
@@ -38,12 +47,38 @@ class ImageTimelineViewController: UIViewController {
             self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
             }, completion: { (b: Bool) -> Void in
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
-                    if (shouldHideLearnMoreBanner()) {
-                        self.feedView.frame.offset(dx: 0, dy: -self.banner.frame.height)
-                        self.scrollView.contentSize = CGSize (width: self.screenSize.width, height: self.feedView.frame.height)
-                    }
+                    self.scrollView.frame.origin.y = 0
                 })
         })
+    }
+    
+    func showTaskCompletion() {
+        
+    }
+    
+    func completedViewPhoto() {
+        if (!getStartedSharePhoto) {
+            getStartedViewPhoto = true
+            showTaskCompletion()
+        }
+    }
+    
+    func completedUseTimeWheel() {
+        if (!getStartedUseTimeWheel) {
+            getStartedUseTimeWheel = true
+            showTaskCompletion()
+        }
+    }
+    
+    func completedSharePhoto() {
+        if (!getStartedSharePhoto) {
+            getStartedSharePhoto = true
+            showTaskCompletion()
+        }
+    }
+    
+    func checkIfCompletedAllGetStartedTasks() -> Bool {
+        return getStartedViewPhoto && getStartedUseTimeWheel && getStartedSharePhoto
     }
     
     @IBAction func onBannerXButton(sender: AnyObject) {
@@ -73,15 +108,13 @@ class ImageTimelineViewController: UIViewController {
         
         // Mark that we've used the timewheel for the Get started page
         if (recognizer.state == UIGestureRecognizerState.Ended && !getStartedUseTimeWheel) {
-            getStartedUseTimeWheel = true
-            if (shouldHideLearnMoreBanner()) {
+            completedUseTimeWheel()
+            if (checkIfCompletedAllGetStartedTasks()) {
                 dismissBanner()
             }
         }
     }
     
-    var thumbnailImageView : UIImageView!
-
     @IBAction func onImageTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
         // Set the fullScreenImage to be the same size, position, & image as the thumbnail
         thumbnailImageView = tapGestureRecognizer.view as UIImageView
@@ -121,7 +154,7 @@ class ImageTimelineViewController: UIViewController {
                     self.fullScreenImageView.frame.origin.x = 0
                     
                     // Mark that user has finished viewing image
-                    getStartedViewPhoto = true
+                    self.completedViewPhoto()
                 })
         })
     }
@@ -164,6 +197,10 @@ class ImageTimelineViewController: UIViewController {
                         // Hide these
                         self.fullScreenImageView.hidden = true
                         self.imageBackgroundView.hidden = true
+                        
+                        if (self.checkIfCompletedAllGetStartedTasks()) {
+                            self.dismissBanner()
+                        }
                     })
         })
     }
@@ -172,7 +209,8 @@ class ImageTimelineViewController: UIViewController {
         if (thumbnailImageView != nil) {
             let activityViewController = UIActivityViewController(activityItems: [thumbnailImageView.image!], applicationActivities: nil)
             self.presentViewController(activityViewController, animated: true, completion: { () -> Void in
-                getStartedSharePhoto = true
+                // Mark that user shared image
+                self.completedSharePhoto()
             })
         }
     }

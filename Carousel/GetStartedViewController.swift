@@ -8,10 +8,6 @@
 
 import UIKit
 
-internal var getStartedViewPhoto = false
-internal var getStartedUseTimeWheel = false
-internal var getStartedSharePhoto = false
-
 class GetStartedViewController: UIViewController {
 
     @IBOutlet weak var viewPhotoCheck: UIImageView!
@@ -34,8 +30,4 @@ class GetStartedViewController: UIViewController {
     @IBAction func onCloseButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-}
-
-func shouldHideLearnMoreBanner() -> Bool {
-    return getStartedViewPhoto && getStartedUseTimeWheel && getStartedSharePhoto
 }
