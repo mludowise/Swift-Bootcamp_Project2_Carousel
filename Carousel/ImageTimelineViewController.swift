@@ -14,7 +14,6 @@ internal var getStartedSharePhoto = false
 
 class ImageTimelineViewController: UIViewController {
 
-    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var feedView: UIView!
@@ -56,7 +55,8 @@ class ImageTimelineViewController: UIViewController {
                 self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
                 }, completion: { (b: Bool) -> Void in
                     UIView.animateWithDuration(0.25, animations: { () -> Void in
-                        self.scrollView.frame.origin.y = 0
+                        self.scrollView.frame.origin.y -= self.banner.frame.height
+                        self.scrollView.frame.size.height += self.banner.frame.height
                     })
             })
         }
@@ -70,7 +70,7 @@ class ImageTimelineViewController: UIViewController {
             self.taskCompletedCheckImageView.alpha = 1
             
             // Show at 150%
-            self.taskCompletedCheckImageView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+            self.taskCompletedCheckImageView.transform = CGAffineTransformMakeScale(1.25, 1.25)
             }) { (completed: Bool) -> Void in
                 UIView.animateWithDuration(0.5, animations: { () -> Void in
                     // Fade Out
@@ -128,7 +128,8 @@ class ImageTimelineViewController: UIViewController {
         }
         
         var translation = recognizer.translationInView(scrubberImage)
-        var navBarHeight = navBar!.frame.size.height + navBar!.frame.origin.y
+        var navBar = navigationController?.navigationBar
+        var navBarHeight = navBar == nil ? 0 : navBar!.frame.size.height + navBar!.frame.origin.y
         var scrollableHeight = scrollView.contentSize.height - screenSize.height + navBarHeight
         var ratio = translation.x / scrubberImage.frame.width
         var offset = -ratio * scrollableHeight
@@ -159,9 +160,17 @@ class ImageTimelineViewController: UIViewController {
         fullScreenImageView.hidden = false
         imageBackgroundView.hidden = false
         
+        // Get navBar for fade out
+        var navBar = navigationController?.navigationBar
+        
         UIView.animateWithDuration(0.25, animations: { () -> Void in
             // Fade in background some
             self.imageBackgroundView.alpha = 0.25
+            
+            // Fade out nav bar some
+            if (navBar != nil) {
+                navBar!.alpha = 0.5
+            }
             
             var imageSize = self.thumbnailImageView.image!.size
             
@@ -175,6 +184,10 @@ class ImageTimelineViewController: UIViewController {
             }
             }, completion: { (completed: Bool) -> Void in
                 UIView.animateWithDuration(0.75, animations: { () -> Void in
+                    // Fade out nav bar all the way
+                    if (navBar != nil) {
+                        navBar!.alpha = 0
+                    }
                     
                     // Fade in background all the way
                     self.imageBackgroundView.alpha = 1
@@ -186,6 +199,10 @@ class ImageTimelineViewController: UIViewController {
                     self.fullScreenImageView.frame.origin.y = 0
                     self.fullScreenImageView.frame.origin.x = 0
                 }, completion: { (completed: Bool) -> Void in
+                    if (navBar != nil) {
+                        navBar!.hidden = true
+                    }
+                    
                     // Mark that user has finished viewing image
                     self.completedViewPhoto()
                 })
@@ -197,7 +214,18 @@ class ImageTimelineViewController: UIViewController {
         var newOrigin = view.convertPoint(thumbnailImageView.frame.origin, fromView: thumbnailImageView.superview?)
         var thumbnailImageFrame = CGRect(origin: newOrigin, size: thumbnailImageView.frame.size)
         
+        // Get navBar for fade in
+        var navBar = navigationController?.navigationBar
+        if (navBar != nil) {
+            navBar!.hidden = false
+        }
+        
         UIView.animateWithDuration(0.75, animations: { () -> Void in
+            // Fade in nav bar some
+            if (navBar != nil) {
+                navBar!.alpha = 0.5
+            }
+            
             // Fade out background some
             self.imageBackgroundView.alpha = 0.75
             
@@ -216,8 +244,13 @@ class ImageTimelineViewController: UIViewController {
             }
             }, completion: { (completed: Bool) -> Void in
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
+                    // Fade in nav bar all the way
+                    if (navBar != nil) {
+                        navBar!.alpha = 1
+                    }
+                    
                     // Fade out background all the way
-                    self.imageBackgroundView.alpha = 0.25
+                    self.imageBackgroundView.alpha = 0
                     
                     // Crop image back to sqaure
                     self.fullScreenImageView.contentMode = UIViewContentMode.ScaleAspectFill

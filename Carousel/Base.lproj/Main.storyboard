@@ -506,7 +506,7 @@
                                 </connections>
                             </view>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z8o-ig-Eip">
-                                <rect key="frame" x="0.0" y="109" width="320" height="1630"/>
+                                <rect key="frame" x="0.0" y="109" width="320" height="1566"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="FGQ-xj-I9e" userLabel="Feed">
@@ -904,49 +904,13 @@
                                 <gestureRecognizers/>
                             </scrollView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="7zS-z3-8Yv">
-                                <rect key="frame" x="0.0" y="1739" width="320" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="0.0" y="1674" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="WoD-mR-CXX" appends="YES" id="OR9-vX-Tfq"/>
                                 </connections>
                             </imageView>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" id="yI1-GU-6xI">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="18"/>
-                                    <color key="textShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="5"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Carousel" id="3pl-Lb-NSC">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="7Fh-27-lcv" userLabel="Messages Bar Button">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VS-By-7O1" userLabel="Messages Button">
-                                                <rect key="frame" x="128" y="177" width="32" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="avatar">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="zXe-oD-ss5" kind="modal" id="Uxh-ip-Wea"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="icon_messages" id="y87-5I-RVQ" userLabel="Messages Button">
-                                            <connections>
-                                                <segue destination="6Fv-B4-IGg" kind="push" id="uTY-zR-cXb"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
-                                        <rect key="value" x="0.0" y="0.0" width="320" height="64"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </navigationBar>
                             <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="qXn-Mv-qbH" userLabel="Image Background">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1710"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -997,14 +961,31 @@
                                 </connections>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox_complete" id="Wuh-yw-LzN" userLabel="Task Completed Check">
-                                <rect key="frame" x="0.0" y="65" width="150" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Carousel" id="bEg-E0-POB"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Carousel" id="bEg-E0-POB">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="7Fh-27-lcv" userLabel="Messages Bar Button">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6VS-By-7O1" userLabel="Messages Button">
+                                <rect key="frame" x="128" y="177" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="avatar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zXe-oD-ss5" kind="modal" id="Uxh-ip-Wea"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icon_messages" id="y87-5I-RVQ" userLabel="Messages Button">
+                            <connections>
+                                <segue destination="6Fv-B4-IGg" kind="push" id="uTY-zR-cXb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1710"/>
                     <connections>
@@ -1013,7 +994,6 @@
                         <outlet property="feedView" destination="FGQ-xj-I9e" id="NsZ-ZD-2Nn"/>
                         <outlet property="fullScreenImageView" destination="g00-Dh-wZN" id="XJQ-Ud-KKu"/>
                         <outlet property="imageBackgroundView" destination="qXn-Mv-qbH" id="fsw-Z6-cr0"/>
-                        <outlet property="navBar" destination="yI1-GU-6xI" id="Zym-rH-fuH"/>
                         <outlet property="scrollView" destination="z8o-ig-Eip" id="UYG-wA-gkn"/>
                         <outlet property="scrubberImage" destination="7zS-z3-8Yv" id="oCn-jg-312"/>
                         <outlet property="taskCompletedCheckImageView" destination="Wuh-yw-LzN" id="Zhk-KM-QiL"/>
@@ -1227,35 +1207,16 @@
                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" id="UIG-h9-W6h">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="18"/>
-                                    <color key="textShadowColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="5"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Conversations" id="xzM-ic-oWA">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron" id="NT9-rY-njK">
-                                            <connections>
-                                                <action selector="onBackButton:" destination="6Fv-B4-IGg" id="sJS-Sp-5sV"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
-                                        <rect key="value" x="0.0" y="0.0" width="320" height="64"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Conversations" id="pHt-c0-QWM"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Conversations" id="pHt-c0-QWM">
+                        <barButtonItem key="leftBarButtonItem" image="chevron" id="NT9-rY-njK">
+                            <connections>
+                                <action selector="onBackButton:" destination="6Fv-B4-IGg" id="sJS-Sp-5sV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                 </viewController>
@@ -1633,7 +1594,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qq5-mV-ctE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vaa-fp-2aE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vaa-fp-2aE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="beG-ux-HVB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
