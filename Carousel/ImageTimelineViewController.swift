@@ -12,7 +12,7 @@ class ImageTimelineViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var banner: UIView!
-    @IBOutlet weak var feedView: UIImageView!
+    @IBOutlet weak var feedView: UIView!
     @IBOutlet weak var scrubberImage: UIImageView!
     
     private var screenSize : CGRect!

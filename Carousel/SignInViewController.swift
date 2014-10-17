@@ -76,7 +76,6 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
     
     @IBAction func onSwipeGesture(sender: AnyObject) {
         dismissKeyboard()
-        println("down swipe")
     }
     
     @IBAction func onSignInButton(sender: AnyObject) {

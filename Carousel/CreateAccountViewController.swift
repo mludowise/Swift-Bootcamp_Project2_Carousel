@@ -86,4 +86,8 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     @IBAction func onBackButton(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBAction func onSwipeGesture(sender: AnyObject) {
+        dismissKeyboard()
+    }
 }
