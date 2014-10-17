@@ -28,6 +28,10 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         
         passwordField.delegate = self
         
+        // Remove navigation bar shadow
+        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationBar.shadowImage = UIImage()
+        
         setupKeyboardMovement(inputsView, buttonsView: ButtonsView, helpText: helpText, navigationBar: navigationBar)
     }
     

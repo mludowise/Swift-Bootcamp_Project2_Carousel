@@ -28,12 +28,12 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         
         passwordTextField.delegate = self
         
-        // Removes bottom shadow on nav bar
-        // TODO: fix navigation bar shadow
-//        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        
         // Don't readjust the help text
         automaticallyAdjustsScrollViewInsets = false
+        
+        // Remove navigation bar shadow
+        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        navigationBar.shadowImage = UIImage()
         
         setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }

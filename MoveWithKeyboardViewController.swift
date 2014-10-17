@@ -17,9 +17,9 @@ class MoveWithKeyboardViewController: UIViewController {
     private var inputsView : UIView!
     private var buttonsView : UIView!
     private var helpText : UIView!
-    private var navigationBar : UINavigationBar!
+    private var navigationBar : UINavigationBar?
 
-    func setupKeyboardMovement(inputsView: UIView, buttonsView: UIView, helpText: UIView, navigationBar: UINavigationBar) {
+    func setupKeyboardMovement(inputsView: UIView, buttonsView: UIView, helpText: UIView, navigationBar: UINavigationBar?) {
         self.inputsView = inputsView
         self.buttonsView = buttonsView
         self.helpText = helpText
@@ -58,7 +58,7 @@ class MoveWithKeyboardViewController: UIViewController {
             // We also want the inputs to move up such that the help text is hidden behind the nav (the bottom of the sign in message should be the same as the bottom of the nav)
             var helpTextY = self.helpText.frame.origin.y
             var helpTextHeight = self.helpText.frame.height
-            var navBarHeight = self.navigationBar.frame.height
+            var navBarHeight = self.navigationBar == nil ? 0 : self.navigationBar!.frame.height
             self.inputsView.frame.origin.y = navBarHeight - helpTextY - helpTextHeight
             
             }, completion: nil)

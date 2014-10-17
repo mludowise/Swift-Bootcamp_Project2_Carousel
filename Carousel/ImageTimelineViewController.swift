@@ -138,7 +138,6 @@ class ImageTimelineViewController: UIViewController {
         newScrollPos = max(newScrollPos, -navBarHeight)
         scrollView.contentOffset.y = newScrollPos
         
-        
         // Mark that we've used the timewheel for the Get started page
         if (recognizer.state == UIGestureRecognizerState.Ended && !getStartedUseTimeWheel) {
             completedUseTimeWheel({ () -> Void in

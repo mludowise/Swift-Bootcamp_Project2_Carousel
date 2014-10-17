@@ -57,6 +57,12 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         // Set the scrollview delegate
         scrollView!.delegate = self
         
+        // Hide navBar
+        var navBar = navigationController?.navigationBar
+        if (navBar != nil) {
+            navBar!.hidden = true
+        }
+        
         // Set the signIn button border programatically because you can't do it in storyboard
         signInButton!.layer.borderWidth = 1
         signInButton!.layer.borderColor = kButtonColor

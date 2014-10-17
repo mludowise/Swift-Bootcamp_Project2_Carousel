@@ -123,6 +123,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ksY-H9-Lfu"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1136"/>
                     <connections>
@@ -1558,7 +1559,7 @@
         <!--Navigation Controller-->
         <scene sceneID="52Z-5s-Cn3">
             <objects>
-                <navigationController storyboardIdentifier="introNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XCd-NC-RqC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="introNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="XCd-NC-RqC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qx8-CV-bXy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1583,6 +1584,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navigationBar.barTintColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="dMw-Hd-ciZ" kind="relationship" relationship="rootViewController" id="V4H-DQ-buK"/>
                     </connections>
@@ -1601,6 +1607,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navigationBar.barTintColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="dNQ-np-b4z" kind="relationship" relationship="rootViewController" id="R7c-B1-cCD"/>
                     </connections>
