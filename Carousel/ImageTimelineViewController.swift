@@ -15,6 +15,10 @@ class ImageTimelineViewController: UIViewController {
     @IBOutlet weak var feedView: UIView!
     @IBOutlet weak var scrubberImage: UIImageView!
     
+    @IBOutlet weak var fullScreenImageView: UIImageView!
+    @IBOutlet weak var imageBackgroundView: UIView!
+    @IBOutlet var backgroundTapGestureRecognizer: UITapGestureRecognizer!
+    
     private var screenSize : CGRect!
     
     private var startScrollPos : CGFloat!
@@ -79,4 +83,71 @@ class ImageTimelineViewController: UIViewController {
             }
         }
     }
+    
+    var thumbnailImageView : UIImageView!
+
+    @IBAction func onImageTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+        thumbnailImageView = tapGestureRecognizer.view as UIImageView
+        fullScreenImageView.image = thumbnailImageView.image
+        
+        var newOrigin = view.convertPoint(thumbnailImageView.frame.origin, fromView: thumbnailImageView.superview?)
+        fullScreenImageView.frame = CGRect(origin: newOrigin, size: thumbnailImageView.frame.size)
+        
+        var imageSize = fullScreenImageView.image!.size
+
+        fullScreenImageView.hidden = false
+        imageBackgroundView.hidden = false
+        
+        UIView.animateWithDuration(0.25, animations: { () -> Void in
+            if (imageSize.height > imageSize.width) {
+                self.fullScreenImageView.frame.size.height = imageSize.height / imageSize.width * self.fullScreenImageView.frame.width
+                self.fullScreenImageView.frame.origin.y -= (self.fullScreenImageView.frame.height - self.fullScreenImageView.frame.width)/2
+            } else {
+                self.fullScreenImageView.frame.size.width = imageSize.width / imageSize.height * self.fullScreenImageView.frame.width
+                self.fullScreenImageView.frame.origin.x -= (self.fullScreenImageView.frame.width - self.fullScreenImageView.frame.height)/2
+            }
+            }, completion: { (b:Bool) -> Void in
+                UIView.animateWithDuration(1, animations: { () -> Void in
+                    self.imageBackgroundView.alpha = 1
+                    self.fullScreenImageView.contentMode = UIViewContentMode.ScaleAspectFit
+                    self.fullScreenImageView.frame.size.width = self.screenSize.width
+                    self.fullScreenImageView.frame.size.height = self.screenSize.height
+                    self.fullScreenImageView.frame.origin.y = 0
+                    self.fullScreenImageView.frame.origin.x = 0
+                })
+        })
+    }
+    
+    @IBAction func onFullScreenImageTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+        var imageSize = fullScreenImageView.image!.size
+        var newOrigin = view.convertPoint(thumbnailImageView.frame.origin, fromView: thumbnailImageView.superview?)
+        var thumbnailImageFrame = CGRect(origin: newOrigin, size: thumbnailImageView.frame.size)
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.imageBackgroundView.alpha = 0
+            if (imageSize.height > imageSize.width) {
+                self.fullScreenImageView.frame.size.width = thumbnailImageFrame.width
+                self.fullScreenImageView.frame.size.height = imageSize.height / imageSize.width * thumbnailImageFrame.width
+                self.fullScreenImageView.frame.origin.y = thumbnailImageFrame.origin.y - (self.fullScreenImageView.frame.height - self.fullScreenImageView.frame.width)/2
+                self.fullScreenImageView.frame.origin.x = thumbnailImageFrame.origin.x
+            } else {
+                self.fullScreenImageView.frame.size.height = thumbnailImageFrame.height
+                self.fullScreenImageView.frame.size.width = imageSize.width / imageSize.height * thumbnailImageFrame.width
+                self.fullScreenImageView.frame.origin.x = thumbnailImageFrame.origin.x - (self.fullScreenImageView.frame.width - self.fullScreenImageView.frame.height)/2
+                self.fullScreenImageView.frame.origin.y = thumbnailImageFrame.origin.y
+            }
+            }, completion: { (b:Bool) -> Void in
+                UIView.animateWithDuration(0.25, animations: { () -> Void in
+                    self.fullScreenImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                    self.fullScreenImageView.frame.size.width = thumbnailImageFrame.width
+                    self.fullScreenImageView.frame.size.height = thumbnailImageFrame.height
+                    self.fullScreenImageView.frame.origin.x = thumbnailImageFrame.origin.x
+                    self.fullScreenImageView.frame.origin.y = thumbnailImageFrame.origin.y
+                    }, completion: { (b:Bool) -> Void in
+                        self.fullScreenImageView.hidden = true
+                        self.imageBackgroundView.hidden = true
+                    })
+        })
+    }
+    
 }
