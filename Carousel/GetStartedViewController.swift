@@ -8,9 +8,9 @@
 
 import UIKit
 
-internal var getStartedViewPhoto = true
+internal var getStartedViewPhoto = false
 internal var getStartedUseTimeWheel = false
-internal var getStartedSharePhoto = true
+internal var getStartedSharePhoto = false
 
 class GetStartedViewController: UIViewController {
 

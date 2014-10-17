@@ -123,6 +123,9 @@ class ImageTimelineViewController: UIViewController {
                     self.fullScreenImageView.frame.size.height = self.screenSize.height
                     self.fullScreenImageView.frame.origin.y = 0
                     self.fullScreenImageView.frame.origin.x = 0
+                    
+                    // Mark that user has finished viewing image
+                    getStartedViewPhoto = true
                 })
         })
     }
@@ -167,6 +170,15 @@ class ImageTimelineViewController: UIViewController {
                         self.imageBackgroundView.hidden = true
                     })
         })
+    }
+
+    @IBAction func swipeUpOnImage(sender: AnyObject) {
+        if (thumbnailImageView != nil) {
+            let activityViewController = UIActivityViewController(activityItems: [thumbnailImageView.image!], applicationActivities: nil)
+            self.presentViewController(activityViewController, animated: true, completion: { () -> Void in
+                getStartedSharePhoto = true
+            })
+        }
     }
     
 }

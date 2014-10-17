@@ -948,6 +948,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="g4w-eb-fAV" appends="YES" id="md5-z2-pk2"/>
+                                    <outletCollection property="gestureRecognizers" destination="vh5-Kv-2AK" appends="YES" id="fQv-RE-laD"/>
                                 </connections>
                             </view>
                             <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="g00-Dh-wZN" userLabel="Full Screen Image">
@@ -956,6 +957,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="g4w-eb-fAV" appends="YES" id="FUy-Xq-0bq"/>
+                                    <outletCollection property="gestureRecognizers" destination="vh5-Kv-2AK" appends="YES" id="fhe-pr-rxO"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -1004,6 +1006,11 @@
                         <action selector="onScrubberPanGesture:" destination="dNQ-np-b4z" id="GxR-ww-Uto"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="g4w-eb-fAV" userLabel="Background Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="onFullScreenImageTapGesture:" destination="dNQ-np-b4z" id="NEe-Nc-tli"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="MpS-9o-oF9">
                     <connections>
                         <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="URq-4F-jwM"/>
@@ -1169,11 +1176,11 @@
                         <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="loe-Nw-fWd"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="g4w-eb-fAV" userLabel="Background Tap Gesture Recognizer">
+                <swipeGestureRecognizer direction="up" id="vh5-Kv-2AK" userLabel="Swipe up on image">
                     <connections>
-                        <action selector="onFullScreenImageTapGesture:" destination="dNQ-np-b4z" id="NEe-Nc-tli"/>
+                        <action selector="swipeUpOnImage:" destination="dNQ-np-b4z" id="EDC-E9-XYv"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1125" y="2773"/>
         </scene>
