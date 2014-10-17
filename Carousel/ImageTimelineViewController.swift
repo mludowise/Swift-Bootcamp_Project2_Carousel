@@ -23,6 +23,8 @@ class ImageTimelineViewController: UIViewController {
     @IBOutlet weak var imageBackgroundView: UIView!
     @IBOutlet var backgroundTapGestureRecognizer: UITapGestureRecognizer!
     
+    @IBOutlet weak var taskCompletedCheckImageView: UIImageView!
+    
     private var screenSize : CGRect!
     private var startScrollPos : CGFloat!
     private var thumbnailImageView : UIImageView!
@@ -36,44 +38,74 @@ class ImageTimelineViewController: UIViewController {
         // Size scrollview
         scrollView.contentSize = CGSize(width: screenSize.width, height: feedView.frame.height)
         
+        // Hide banner if all tasks have been completed
         if (checkIfCompletedAllGetStartedTasks()) {
             self.banner.hidden = true
             self.scrollView.frame.origin.y = 0
         }
+        
+        // Center checkmark
+        taskCompletedCheckImageView.frame.origin.x = (screenSize.width - taskCompletedCheckImageView.frame.width) / 2
+        taskCompletedCheckImageView.frame.origin.y = (screenSize.height - taskCompletedCheckImageView.frame.height) / 2
     }
     
     func dismissBanner() {
-        UIView.animateWithDuration(0.5, animations: {
-            self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
-            }, completion: { (b: Bool) -> Void in
-                UIView.animateWithDuration(0.25, animations: { () -> Void in
-                    self.scrollView.frame.origin.y = 0
-                })
-        })
-    }
-    
-    func showTaskCompletion() {
-        
-    }
-    
-    func completedViewPhoto() {
-        if (!getStartedSharePhoto) {
-            getStartedViewPhoto = true
-            showTaskCompletion()
+        if (!banner.hidden) {
+            UIView.animateWithDuration(0.5, animations: {
+                self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
+                }, completion: { (b: Bool) -> Void in
+                    UIView.animateWithDuration(0.25, animations: { () -> Void in
+                        self.scrollView.frame.origin.y = 0
+                    })
+            })
         }
     }
     
-    func completedUseTimeWheel() {
+    func showTaskCompletion(completion: (() -> Void)?) {
+        // Unhide checkmark
+        taskCompletedCheckImageView.hidden = false
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            // Fade In
+            self.taskCompletedCheckImageView.alpha = 1
+            
+            // Show at 150%
+            self.taskCompletedCheckImageView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+            }) { (completed: Bool) -> Void in
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    // Fade Out
+                    self.taskCompletedCheckImageView.alpha = 0
+                    
+                    // Show at 100%
+                    self.taskCompletedCheckImageView.transform = CGAffineTransformMakeScale(1, 1)
+                    }, completion: { (completed: Bool) -> Void in
+                        // Hide again
+                        self.taskCompletedCheckImageView.hidden = true
+                        
+                        if (completion != nil) {
+                            completion!()
+                        }
+                })
+        }
+    }
+    
+    func completedViewPhoto() {
+        if (!getStartedViewPhoto) {
+            getStartedViewPhoto = true
+            showTaskCompletion(nil)
+        }
+    }
+    
+    func completedUseTimeWheel(completion: (() -> Void)?) {
         if (!getStartedUseTimeWheel) {
             getStartedUseTimeWheel = true
-            showTaskCompletion()
+            showTaskCompletion(completion)
         }
     }
     
     func completedSharePhoto() {
         if (!getStartedSharePhoto) {
             getStartedSharePhoto = true
-            showTaskCompletion()
+            showTaskCompletion(nil)
         }
     }
     
@@ -108,10 +140,11 @@ class ImageTimelineViewController: UIViewController {
         
         // Mark that we've used the timewheel for the Get started page
         if (recognizer.state == UIGestureRecognizerState.Ended && !getStartedUseTimeWheel) {
-            completedUseTimeWheel()
-            if (checkIfCompletedAllGetStartedTasks()) {
-                dismissBanner()
-            }
+            completedUseTimeWheel({ () -> Void in
+                if (self.checkIfCompletedAllGetStartedTasks()) {
+                    self.dismissBanner()
+                }
+            })
         }
     }
     
@@ -140,7 +173,7 @@ class ImageTimelineViewController: UIViewController {
                 self.fullScreenImageView.frame.size.width = imageSize.width / imageSize.height * self.fullScreenImageView.frame.width
                 self.fullScreenImageView.frame.origin.x -= (self.fullScreenImageView.frame.width - self.fullScreenImageView.frame.height)/2
             }
-            }, completion: { (b:Bool) -> Void in
+            }, completion: { (completed: Bool) -> Void in
                 UIView.animateWithDuration(0.75, animations: { () -> Void in
                     
                     // Fade in background all the way
@@ -152,7 +185,7 @@ class ImageTimelineViewController: UIViewController {
                     self.fullScreenImageView.frame.size.height = self.screenSize.height
                     self.fullScreenImageView.frame.origin.y = 0
                     self.fullScreenImageView.frame.origin.x = 0
-                    
+                }, completion: { (completed: Bool) -> Void in
                     // Mark that user has finished viewing image
                     self.completedViewPhoto()
                 })
@@ -181,7 +214,7 @@ class ImageTimelineViewController: UIViewController {
                 self.fullScreenImageView.frame.origin.x = thumbnailImageFrame.origin.x - (self.fullScreenImageView.frame.width - self.fullScreenImageView.frame.height)/2
                 self.fullScreenImageView.frame.origin.y = thumbnailImageFrame.origin.y
             }
-            }, completion: { (b:Bool) -> Void in
+            }, completion: { (completed: Bool) -> Void in
                 UIView.animateWithDuration(0.25, animations: { () -> Void in
                     // Fade out background all the way
                     self.imageBackgroundView.alpha = 0.25
@@ -192,13 +225,13 @@ class ImageTimelineViewController: UIViewController {
                     self.fullScreenImageView.frame.size.height = thumbnailImageFrame.height
                     self.fullScreenImageView.frame.origin.x = thumbnailImageFrame.origin.x
                     self.fullScreenImageView.frame.origin.y = thumbnailImageFrame.origin.y
-                    }, completion: { (b:Bool) -> Void in
+                    }, completion: { (completed: Bool) -> Void in
                         
                         // Hide these
                         self.fullScreenImageView.hidden = true
                         self.imageBackgroundView.hidden = true
                         
-                        if (self.checkIfCompletedAllGetStartedTasks()) {
+                        if(self.checkIfCompletedAllGetStartedTasks()) {
                             self.dismissBanner()
                         }
                     })
@@ -208,10 +241,11 @@ class ImageTimelineViewController: UIViewController {
     @IBAction func swipeUpOnImage(sender: AnyObject) {
         if (thumbnailImageView != nil) {
             let activityViewController = UIActivityViewController(activityItems: [thumbnailImageView.image!], applicationActivities: nil)
-            self.presentViewController(activityViewController, animated: true, completion: { () -> Void in
+            activityViewController.completionHandler = { (activityType: String?, completed: Bool) -> Void in
                 // Mark that user shared image
                 self.completedSharePhoto()
-            })
+            }
+            self.presentViewController(activityViewController, animated: true, completion: nil)
         }
     }
     

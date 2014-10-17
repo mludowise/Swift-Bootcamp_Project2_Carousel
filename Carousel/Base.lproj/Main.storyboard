@@ -960,6 +960,10 @@
                                     <outletCollection property="gestureRecognizers" destination="vh5-Kv-2AK" appends="YES" id="fhe-pr-rxO"/>
                                 </connections>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox_complete" id="Wuh-yw-LzN" userLabel="Task Completed Check">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -993,6 +997,7 @@
                         <outlet property="imageBackgroundView" destination="qXn-Mv-qbH" id="fsw-Z6-cr0"/>
                         <outlet property="scrollView" destination="z8o-ig-Eip" id="UYG-wA-gkn"/>
                         <outlet property="scrubberImage" destination="7zS-z3-8Yv" id="oCn-jg-312"/>
+                        <outlet property="taskCompletedCheckImageView" destination="Wuh-yw-LzN" id="Zhk-KM-QiL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDP-Wi-Yjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2445,6 +2450,7 @@ Judicial forum for disputes. In the event that the agreement to arbitrate is fou
     <resources>
         <image name="avatar" width="87" height="87"/>
         <image name="banner_cropped" width="55" height="44"/>
+        <image name="checkbox_complete" width="24" height="24"/>
         <image name="checkbox_unchecked" width="23" height="23"/>
         <image name="chevron" width="13" height="21"/>
         <image name="conversations_cropped" width="320" height="60"/>
