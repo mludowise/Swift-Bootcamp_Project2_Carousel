@@ -14,6 +14,7 @@ internal var getStartedSharePhoto = false
 
 class ImageTimelineViewController: UIViewController {
 
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var banner: UIView!
     @IBOutlet weak var feedView: UIView!
@@ -127,8 +128,7 @@ class ImageTimelineViewController: UIViewController {
         }
         
         var translation = recognizer.translationInView(scrubberImage)
-        var navBar = navigationController?.navigationBar
-        var navBarHeight = navBar == nil ? 0 : navBar!.frame.size.height + navBar!.frame.origin.y
+        var navBarHeight = navBar!.frame.size.height + navBar!.frame.origin.y
         var scrollableHeight = scrollView.contentSize.height - screenSize.height + navBarHeight
         var ratio = translation.x / scrubberImage.frame.width
         var offset = -ratio * scrollableHeight
