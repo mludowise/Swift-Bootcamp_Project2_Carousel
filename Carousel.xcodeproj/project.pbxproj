@@ -14,6 +14,7 @@
 		E64ABD6219EE0CDC0091970F /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6119EE0CDC0091970F /* CarouselTests.swift */; };
 		E64ABD6C19EE27AE0091970F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6B19EE27AE0091970F /* IntroViewController.swift */; };
 		E64ABD6E19EE37810091970F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64ABD6D19EE37810091970F /* SignInViewController.swift */; };
+		E66B28CC19F19A1A008073AF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B28CB19F19A1A008073AF /* ForgotPasswordViewController.swift */; };
 		E67D50FD19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */; };
 		E67D50FF19EF5DF800ABA6EB /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D50FE19EF5DF800ABA6EB /* Util.swift */; };
 		E67D510219EF65D500ABA6EB /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D510119EF65D500ABA6EB /* GetStartedViewController.swift */; };
@@ -49,6 +50,7 @@
 		E64ABD6119EE0CDC0091970F /* CarouselTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTests.swift; sourceTree = "<group>"; };
 		E64ABD6B19EE27AE0091970F /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E64ABD6D19EE37810091970F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E66B28CB19F19A1A008073AF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsOfServiceViewController.swift; path = ../TermsOfServiceViewController.swift; sourceTree = "<group>"; };
 		E67D50FE19EF5DF800ABA6EB /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E67D510119EF65D500ABA6EB /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		E67D510019EF5EB300ABA6EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E66B28CB19F19A1A008073AF /* ForgotPasswordViewController.swift */,
 				E67D50FC19EF5C2E00ABA6EB /* TermsOfServiceViewController.swift */,
 				E6DC0A5E19EF48AB009BAC21 /* MoveWithKeyboardViewController.swift */,
 				E64ABD6D19EE37810091970F /* SignInViewController.swift */,
@@ -267,6 +270,7 @@
 				E67D50FF19EF5DF800ABA6EB /* Util.swift in Sources */,
 				E64ABD4C19EE0CDC0091970F /* AppDelegate.swift in Sources */,
 				E6DC0A6119EF4BD4009BAC21 /* CreateAccountViewController.swift in Sources */,
+				E66B28CC19F19A1A008073AF /* ForgotPasswordViewController.swift in Sources */,
 				E6DC0A5719EF226D009BAC21 /* ImageTimelineViewController.swift in Sources */,
 				E6DC0A6319EF54FC009BAC21 /* StringConstants.swift in Sources */,
 				E6DC0A5919EF3963009BAC21 /* SettingsViewController.swift in Sources */,

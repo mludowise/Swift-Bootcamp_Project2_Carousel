@@ -27,3 +27,5 @@ internal let kOkButtonTxt = "OK"
 internal let kTermsMsg = "Before you can complete your registration, you must accept the Dropbox Terms of Service."
 internal let kAgreeButtonTxt = "I Agree"
 internal let kViewTermsButtonTxt = "View Terms"
+
+internal let kForgotPassTtl = "Instructions have been sent."
