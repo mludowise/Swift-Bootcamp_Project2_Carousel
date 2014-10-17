@@ -14,12 +14,14 @@ Completed User Stories:
   * [x]	User sees an error alert when entering the wrong email/password combination.
   * [x]	User is taken to the tutorial screens upon entering the correct email/password combination.
   * [x]	Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
-  * [x]	Optional: On appear, scale the form up and fade it in.
-* [ ]	Optional: Sign Up
+  * [ ]	Optional: On appear, scale the form up and fade it in.
+  * [x] Optional: Clicking "Go" on keyboard submits form.
+* [x]	Optional: Sign Up
   * [x]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
   * [ ]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
   * [ ]	Optional: Tapping on Terms shows a webview with the terms.
   * [x]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
+  * [x] Optional: Clicking "Go" on keyboard submits form.
 * [x]	Tutorial Screens
   * [x]	User can page between the screens
   * [x]	Optional: User can page between the screens with updated dots
