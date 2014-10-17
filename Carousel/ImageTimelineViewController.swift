@@ -64,20 +64,16 @@ class ImageTimelineViewController: UIViewController {
         var navBarHeight = navBar == nil ? 0 : navBar!.frame.size.height + navBar!.frame.origin.y
         var scrollableHeight = scrollView.contentSize.height - screenSize.height + navBarHeight
         var ratio = translation.x / scrubberImage.frame.width
-        var offset = ratio * scrollableHeight
+        var offset = -ratio * scrollableHeight
         var newScrollPos = startScrollPos + offset
         newScrollPos = min(newScrollPos, scrollableHeight)
         newScrollPos = max(newScrollPos, -navBarHeight)
         scrollView.contentOffset.y = newScrollPos
         
         
-        if (recognizer.state == UIGestureRecognizerState.Ended) {
-            println("end")
-        }
         // Mark that we've used the timewheel for the Get started page
         if (recognizer.state == UIGestureRecognizerState.Ended && !getStartedUseTimeWheel) {
             getStartedUseTimeWheel = true
-            print("checking banner")
             if (shouldHideLearnMoreBanner()) {
                 dismissBanner()
             }
