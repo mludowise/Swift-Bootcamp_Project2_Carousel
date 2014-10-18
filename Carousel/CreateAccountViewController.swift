@@ -23,6 +23,11 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     @IBOutlet weak var agreeToTermsLabel: UILabel!
     @IBOutlet weak var agreeToTermsButton: UIButton!
     
+    var firstNameAlertView : UIAlertView?
+    var lastNameAlertView : UIAlertView?
+    var emailAlertView : UIAlertView?
+    var passwordAlertView : UIAlertView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,31 +42,43 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         
         setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }
-        
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if (alertView == firstNameAlertView) {
+            firstNameField.becomeFirstResponder()
+        } else if (alertView == lastNameAlertView) {
+            lastNameField.becomeFirstResponder()
+        } else if (alertView == emailAlertView) {
+            emailField.becomeFirstResponder()
+        } else if (alertView == passwordAlertView) {
+            passwordField.becomeFirstResponder()
+        }
+    }
+    
     func checkFields() {
         if (firstNameField.text == "") {
-            var alertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            firstNameAlertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            firstNameAlertView!.show()
             return
         }
         if (lastNameField.text == "") {
-            var alertView = UIAlertView(title: kLastNameRequiredTtl, message: kLastNameRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            lastNameAlertView = UIAlertView(title: kLastNameRequiredTtl, message: kLastNameRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            lastNameAlertView!.show()
             return
         }
         if (emailField.text == "") {
-            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            emailAlertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            emailAlertView!.show()
             return
         }
         if (passwordField.text == "") {
-            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            passwordAlertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            passwordAlertView!.show()
             return
         }
         if (!agreeToTermsButton.selected) {
-            var alertView = UIAlertView(title: kTermsRequiredTtl, message: kTermsRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            var agreeToTermsAlertView = UIAlertView(title: kTermsRequiredTtl, message: kTermsRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
+            agreeToTermsAlertView.show()
             return
         }
         
@@ -78,10 +95,13 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         switch(textField) {
         case firstNameField:
             lastNameField.becomeFirstResponder()
+            break
         case lastNameField:
             emailField.becomeFirstResponder()
+            break
         case emailField:
             passwordField.becomeFirstResponder()
+            break
         default: // passwordField
             dismissKeyboard()
             checkFields()

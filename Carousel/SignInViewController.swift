@@ -23,6 +23,9 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var emailAlertView : UIAlertView?
+    var passwordAlertView : UIAlertView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,15 +39,23 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }
     
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if (alertView == emailAlertView) {
+            emailTextField.becomeFirstResponder()
+        } else if (alertView == passwordAlertView) {
+            passwordTextField.becomeFirstResponder()
+        }
+    }
+    
     func checkPassword() {
         if (emailTextField.text == "") {
-            var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            emailAlertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            emailAlertView!.show()
             return
         }
         if (passwordTextField.text == "") {
-            var alertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
-            alertView.show()
+            passwordAlertView = UIAlertView(title: kPassRequiredTtl, message: kPassRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            passwordAlertView!.show()
             return
         }
         
