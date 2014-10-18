@@ -46,13 +46,11 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     ]
     private var tileEndPositions : [CGPoint] = []
     
-    private var screenSize : CGRect?
+    // Cache screen size
+    private var screenSize = UIScreen.mainScreen().bounds
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Cache screen size
-        screenSize = UIScreen.mainScreen().bounds
         
         // Set the scrollview delegate
         scrollView!.delegate = self
@@ -68,13 +66,16 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         signInButton!.layer.borderColor = kButtonColor
         
         // Set the main view to be below the fold
-        mainView!.frame.origin.y = screenSize!.height
+        mainView!.frame.origin.y = screenSize.height
         
         // The scrollview should be double the screen height
-        scrollView!.contentSize = CGSizeMake(mainView!.frame.width, screenSize!.height * 2)
+        scrollView!.contentSize = CGSizeMake(mainView!.frame.width, screenSize.height * 2)
         
         // Assume the tiles are in their final position in the storyboard. Cache their positions & sizes
         initializeTiles([tileImage1!, tileImage2!, tileImage3!, tileImage4!, tileImage5!, tileImage6!])
+        
+        // Initialize Images to the correct place
+        transformImagesFromScrollPosition()
     }
     
     func initializeTiles(imageViews : [UIImageView]) {
@@ -83,7 +84,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
             tileEndPositions.append(CGPoint(x: imageView.frame.origin.x + imageView.frame.width / 2,
                 y: imageView.frame.origin.y + imageView.frame.height / 2))
 
-            transformImage(i, amount: CGFloat(0))
+//            transformImage(i, amount: CGFloat(0))
             
 //            print(i)
 //            print(": x=")
@@ -98,14 +99,17 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {
+        transformImagesFromScrollPosition()
+    }
+    
+    func transformImagesFromScrollPosition() {
         // Will scroll between 0 and the height of the screen
-        var scrollPercentage = scrollView.contentOffset.y / screenSize!.height
+        var scrollPercentage = scrollView!.contentOffset.y / scrollView!.bounds.size.height
         scrollPercentage = max(0, scrollPercentage)
         scrollPercentage = min(1, scrollPercentage)
         for (i, imageView) in enumerate(tileImageViews) {
             transformImage(i, amount: CGFloat(scrollPercentage))
         }
-        
     }
     
     func transformImage(index: Int, amount: CGFloat) {
@@ -118,5 +122,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
             (tileTransform[index].scale - 1) * (1 - amount) + 1,
             (tileTransform[index].scale - 1) * (1 - amount) + 1)
         imageView.transform = CGAffineTransformRotate(imageView.transform, tileTransform[index].rotation  * (1 - amount))
+    }
+    
+    func scrollToBottom() {
+        var bottomOffset = self.scrollView!.contentSize.height - scrollView!.bounds.size.height + 20
+        scrollView?.contentOffset.y = bottomOffset
     }
 }

@@ -85,6 +85,11 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     
     @IBAction func onBackButton(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
+        
+        var introViewController = navigationController?.viewControllers[0] as IntroViewController
+        
+        // Make sure view is scrolled to the bottom
+        introViewController.scrollToBottom()
     }
     
     @IBAction func onSwipeGesture(sender: AnyObject) {

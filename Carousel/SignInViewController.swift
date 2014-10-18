@@ -79,6 +79,11 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
     }
     
     @IBAction func onBackButton(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
+        
+        var introViewController = navigationController?.viewControllers[0] as IntroViewController
+        
+        // Make sure view is scrolled to the bottom
+        introViewController.scrollToBottom()
     }
 }
