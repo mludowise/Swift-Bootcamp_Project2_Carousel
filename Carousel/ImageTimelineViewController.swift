@@ -128,14 +128,12 @@ class ImageTimelineViewController: UIViewController {
         }
         
         var translation = recognizer.translationInView(scrubberImage)
-        var navBar = navigationController?.navigationBar
-        var navBarHeight = navBar == nil ? 0 : navBar!.frame.size.height + navBar!.frame.origin.y
-        var scrollableHeight = scrollView.contentSize.height - screenSize.height + navBarHeight
+        var scrollableHeight = scrollView.contentSize.height - scrollView.frame.height
         var ratio = translation.x / scrubberImage.frame.width
         var offset = -ratio * scrollableHeight
         var newScrollPos = startScrollPos + offset
         newScrollPos = min(newScrollPos, scrollableHeight)
-        newScrollPos = max(newScrollPos, -navBarHeight)
+        newScrollPos = max(newScrollPos, 0)
         scrollView.contentOffset.y = newScrollPos
         
         // Mark that we've used the timewheel for the Get started page
