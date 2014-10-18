@@ -15,13 +15,16 @@ Completed User Stories:
   * [x]	User is taken to the tutorial screens upon entering the correct email/password combination.
   * [x]	Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   * [ ]	Optional: On appear, scale the form up and fade it in.
-  * [x] Optional: Clicking "Go" on keyboard submits form.
+  * [x] Optional: Tapping "Next" selects the next field and tapping "Go" on keyboard submits form.
+  * [x] Optional: Forgot Password
+  * [x] Optional: Field is automatically selected when no email or password is present.
 * [x]	Optional: Sign Up
   * [x]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
   * [x]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
   * [x]	Optional: Tapping on Terms shows a webview with the terms.
   * [x]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
   * [x] Optional: Clicking "Go" on keyboard submits form.
+  * [x] Optional: Field is automatically selected when no first name, last name, email, or password is present.
 * [x]	Tutorial Screens
   * [x]	User can page between the screens
   * [x]	Optional: User can page between the screens with updated dots
@@ -48,7 +51,7 @@ Completed User Stories:
 
 Notes:
 
-TBD...
+Spent way too much time on this project tweaking things here and there, but learned a lot along the way.
 
 Walkthrough of all user stories:
 
