@@ -17,6 +17,8 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var buttonControlView: UIView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     private var screenSize : CGRect!
     
     override func viewDidLoad() {
@@ -34,6 +36,10 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         welcomeView4.frame.size.width = screenSize.width
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        activityIndicator.stopAnimating()
+    }
+    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
         // Get the current page based on the scroll offset
         var page : Int = Int(round(scrollView.contentOffset.x / screenSize.width))
@@ -47,5 +53,9 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         var alpha = max(0, scrollView.contentOffset.x - screenSize.width * 2) / screenSize.width
         buttonControlView.alpha = alpha
         pageControl.alpha = 1-alpha
+    }
+    
+    @IBAction func onTakeForASpinButton(sender: AnyObject) {
+        activityIndicator.startAnimating()
     }
 }

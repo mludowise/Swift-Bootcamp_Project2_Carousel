@@ -416,9 +416,14 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="onTakeForASpinButton:" destination="eBj-m0-OmH" eventType="touchUpInside" id="6Ek-jy-dgC"/>
                                                             <segue destination="Vaa-fp-2aE" kind="modal" modalTransitionStyle="crossDissolve" id="WHH-FU-SJM"/>
                                                         </connections>
                                                     </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="mbS-fZ-htu">
+                                                        <rect key="frame" x="270" y="59" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="Dtw-ta-6gg" userLabel="Help Text">
@@ -451,6 +456,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1280" height="568"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="mbS-fZ-htu" id="cfz-6m-ava"/>
                         <outlet property="buttonControlView" destination="wMu-9N-ALr" id="aTF-v5-4LG"/>
                         <outlet property="pageControl" destination="xo0-YC-ieU" id="sYb-l0-HxF"/>
                         <outlet property="scrollView" destination="NgS-4P-Jp1" id="g6V-6U-Wbt"/>
