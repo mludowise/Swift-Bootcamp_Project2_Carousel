@@ -12,7 +12,7 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
 
     @IBOutlet weak var helpText: UITextView!
     @IBOutlet weak var inputsView: UIView!
-    @IBOutlet weak var ButtonsView: UIView!
+    @IBOutlet weak var buttonsView: UIView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     @IBOutlet weak var firstNameField: UITextField!
@@ -27,12 +27,8 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         automaticallyAdjustsScrollViewInsets = false
         
         passwordField.delegate = self
-        
-        // Remove navigation bar shadow
-        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        navigationBar.shadowImage = UIImage()
-        
-        setupKeyboardMovement(inputsView, buttonsView: ButtonsView, helpText: helpText, navigationBar: navigationBar)
+                
+        setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }
     
     func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {

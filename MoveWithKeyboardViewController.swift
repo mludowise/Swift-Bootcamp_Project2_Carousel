@@ -38,7 +38,7 @@ class MoveWithKeyboardViewController: UIViewController {
 
     }
     
-    private func keyboardWillShow(notification: NSNotification!) {
+    func keyboardWillShow(notification: NSNotification!) {
         var userInfo = notification.userInfo!
         
         // Get the keyboard height and width from the notification
