@@ -18,7 +18,7 @@ Completed User Stories:
   * [x] Optional: Clicking "Go" on keyboard submits form.
 * [x]	Optional: Sign Up
   * [x]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
-  * [ ]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
+  * [x]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
   * [ ]	Optional: Tapping on Terms shows a webview with the terms.
   * [x]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
   * [x] Optional: Clicking "Go" on keyboard submits form.
