@@ -1703,7 +1703,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g6X-kR-qhz">
-                                        <rect key="frame" x="20" y="293" width="20" height="22"/>
+                                        <rect key="frame" x="20" y="294" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="check_box" backgroundImage="check_box_selected">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
