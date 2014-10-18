@@ -148,7 +148,7 @@ class ImageTimelineViewController: UIViewController {
         }
     }
     
-    @IBAction func onImageTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
+    @IBAction func onThumbnailTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
         // Set the fullScreenImage to be the same size, position, & image as the thumbnail
         thumbnailImageView = tapGestureRecognizer.view as UIImageView
         var newOrigin = view.convertPoint(thumbnailImageView.frame.origin, fromView: thumbnailImageView.superview?)

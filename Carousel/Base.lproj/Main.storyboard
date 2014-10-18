@@ -1022,167 +1022,167 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="MpS-9o-oF9">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="URq-4F-jwM"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="URq-4F-jwM"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="4Yp-oy-eyp">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="J5M-a8-xJm"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="J5M-a8-xJm"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="cZz-2s-wN4">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="mAd-SJ-lK6"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="mAd-SJ-lK6"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="LT6-O1-rUP">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="NX7-yx-gkI"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="NX7-yx-gkI"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dVs-mp-eTA">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="pSI-ko-bLU"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="pSI-ko-bLU"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="9D7-aO-r8b">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="OFH-TR-L85"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="OFH-TR-L85"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="rBY-Ks-nXs">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="xVq-Ji-WXm"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="xVq-Ji-WXm"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="kpG-HA-qHS">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="Qve-IS-E8a"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="Qve-IS-E8a"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jLw-R9-kEm">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="FAa-yr-dvL"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="FAa-yr-dvL"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="CPT-uL-xgf">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="blr-9b-4A0"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="blr-9b-4A0"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="1nU-Xg-Qci">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="fvH-sM-8ka"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="fvH-sM-8ka"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="gEn-cp-8tu">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="D5S-oc-Jmb"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="D5S-oc-Jmb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jxZ-Um-Ymz">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="Qcc-35-gt3"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="Qcc-35-gt3"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="iV5-IA-Gcw">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="iBG-Gy-5J1"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="iBG-Gy-5J1"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="oNV-sM-AXR">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="fRS-K4-quX"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="fRS-K4-quX"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="v5U-Yc-pa2">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="D3e-oM-Jq9"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="D3e-oM-Jq9"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="DGx-9A-6Ve">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="TJi-dM-1rx"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="TJi-dM-1rx"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="H2W-NT-umG">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="yhB-Ds-IMR"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="yhB-Ds-IMR"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="5mY-np-Tnb">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="qud-WV-7fb"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="qud-WV-7fb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="F0A-nU-zzb">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="BXi-o6-yJD"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="BXi-o6-yJD"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="DGY-mg-dgB">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="Ihr-Xe-2Uz"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="Ihr-Xe-2Uz"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Kte-ed-Odd">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="sNW-77-AOn"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="sNW-77-AOn"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="nEE-3g-h0k">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="Cfa-8d-DcV"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="Cfa-8d-DcV"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mpS-UF-FbL">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="S4W-53-Xx0"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="S4W-53-Xx0"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Epf-tj-wxO">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="PDl-Ob-FTo"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="PDl-Ob-FTo"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Vk8-QQ-T2m">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="k0X-8W-X5U"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="k0X-8W-X5U"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="H1T-RR-PmF">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="48M-bA-mJ6"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="48M-bA-mJ6"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="OgO-LC-mna">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="fzm-j2-DpH"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="fzm-j2-DpH"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ihF-r9-bf2">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="d51-eZ-YAY"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="d51-eZ-YAY"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="E2Q-X7-zlE">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="oRB-mA-Fam"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="oRB-mA-Fam"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="iDB-13-urL">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="A2g-ih-4xD"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="A2g-ih-4xD"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="nbs-il-xvj">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="hT0-fr-u9o"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="hT0-fr-u9o"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ClT-AO-o1K">
                     <connections>
-                        <action selector="onImageTapGesture:" destination="dNQ-np-b4z" id="loe-Nw-fWd"/>
+                        <action selector="onThumbnailTapGesture:" destination="dNQ-np-b4z" id="loe-Nw-fWd"/>
                     </connections>
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="vh5-Kv-2AK" userLabel="Swipe up on image">
