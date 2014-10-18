@@ -24,8 +24,11 @@ internal let kSignInFailTtl = "Sign In Failed"
 internal let kSignInFailMsg = "Incorrect Email or Password."
 internal let kOkButtonTxt = "OK"
 
-internal let kTermsMsg = "Before you can complete your registration, you must accept the Dropbox Terms of Service."
-internal let kAgreeButtonTxt = "I Agree"
-internal let kViewTermsButtonTxt = "View Terms"
+//internal let kTermsMsg = "Before you can complete your registration, you must accept the Dropbox Terms of Service."
+//internal let kAgreeButtonTxt = "I Agree"
+//internal let kViewTermsButtonTxt = "View Terms"
+
+internal let kTermsRequiredTtl = "Terms of Service"
+internal let kTermsRequiredMsg = "Please check the box to acknowledge that you agree to our Terms of Service."
 
 internal let kForgotPassTtl = "Instructions have been sent."

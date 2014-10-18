@@ -20,6 +20,9 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var agreeToTermsLabel: UILabel!
+    @IBOutlet weak var agreeToTermsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,22 +37,7 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         
         setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }
-    
-    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
-        if (buttonIndex == 0) { // I Agree
-            var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
-            alertView.show()
-            delay(2, { () -> () in
-                alertView.dismissWithClickedButtonIndex(0, animated: true)
-                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
-                self.presentViewController(welcomeViewControler, animated: true, completion: nil)
-            })
-        } else { // View Terms
-            var termsOfServiceController = storyboard?.instantiateViewControllerWithIdentifier(termsOfServiceViewControllerID) as UIViewController
-            presentViewController(termsOfServiceController, animated: true, completion: nil)
-        }
-    }
-    
+        
     func checkFields() {
         if (firstNameField.text == "") {
             var alertView = UIAlertView(title: kFirstNameRequiredTtl, message: kFirstNameRequiredMsg, delegate: nil, cancelButtonTitle: kOkButtonTxt)
@@ -71,9 +59,19 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
             alertView.show()
             return
         }
+        if (!agreeToTermsButton.selected) {
+            var alertView = UIAlertView(title: kTermsRequiredTtl, message: kTermsRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
+            alertView.show()
+            return
+        }
         
-        var alertView = UIAlertView(title: "", message: kTermsMsg, delegate: self, cancelButtonTitle: kAgreeButtonTxt, otherButtonTitles: kViewTermsButtonTxt)
+        var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
         alertView.show()
+        delay(2, { () -> () in
+            alertView.dismissWithClickedButtonIndex(0, animated: true)
+            var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
+            self.presentViewController(welcomeViewControler, animated: true, completion: nil)
+        })
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -107,5 +105,9 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     
     @IBAction func onSwipeGesture(sender: AnyObject) {
         dismissKeyboard()
+    }
+    
+    @IBAction func onAgreeToTermsButton(sender: AnyObject) {
+        agreeToTermsButton.selected = !agreeToTermsButton.selected
     }
 }

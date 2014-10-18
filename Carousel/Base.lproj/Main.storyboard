@@ -1633,64 +1633,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Iof-8E-CyQ" userLabel="Inputs">
-                                <rect key="frame" x="0.0" y="76" width="320" height="289"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="322"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="vwr-em-eSM" userLabel="line">
-                                        <rect key="frame" x="18" y="102" width="284" height="1"/>
+                                        <rect key="frame" x="18" y="104" width="284" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="f1l-bp-LA0" userLabel="line">
-                                        <rect key="frame" x="18" y="146" width="284" height="1"/>
+                                        <rect key="frame" x="18" y="148" width="284" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="ohr-7b-Z11" userLabel="line">
-                                        <rect key="frame" x="18" y="190" width="284" height="1"/>
+                                        <rect key="frame" x="18" y="192" width="284" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="nsP-Db-ttY" userLabel="line">
-                                        <rect key="frame" x="18" y="233" width="284" height="1"/>
+                                        <rect key="frame" x="18" y="235" width="284" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="MuZ-s1-DDj" userLabel="line">
-                                        <rect key="frame" x="18" y="277" width="284" height="1"/>
+                                        <rect key="frame" x="18" y="279" width="284" height="1"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" id="SBP-Ob-jAs">
-                                        <rect key="frame" x="20" y="110" width="280" height="30"/>
+                                        <rect key="frame" x="20" y="112" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" id="JNx-Et-And">
-                                        <rect key="frame" x="20" y="154" width="280" height="30"/>
+                                        <rect key="frame" x="20" y="156" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="zWS-KF-UTD">
-                                        <rect key="frame" x="20" y="197" width="280" height="30"/>
+                                        <rect key="frame" x="20" y="199" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="Xq9-Q4-hQj">
-                                        <rect key="frame" x="20" y="239" width="280" height="30"/>
+                                        <rect key="frame" x="20" y="241" width="280" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="tKg-Nb-gyp" userLabel="Help Text">
-                                        <rect key="frame" x="11" y="8" width="298" height="72.5"/>
+                                        <rect key="frame" x="11" y="20" width="298" height="72.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Carousel uses Dropbox to store your memories so they're safe and available anywhere">
@@ -1702,16 +1702,54 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g6X-kR-qhz">
+                                        <rect key="frame" x="20" y="293" width="20" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="check_box" backgroundImage="check_box_selected">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="check_box_selected"/>
+                                        <connections>
+                                            <action selector="onAgreeToTermsButton:" destination="07J-ea-ZRi" eventType="touchUpInside" id="TaL-pk-BN9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I allow Carousel to access my photos and agree to" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DOy-1x-LbO">
+                                        <rect key="frame" x="53" y="289" width="235" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" red="0.10980392160000001" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="9qX-cw-81b">
+                                        <rect key="frame" x="130" y="300" width="35" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Terms">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.10980392156862745" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                        <color key="NSUnderlineColor" red="0.10980392156862745" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HQv-UP-efs" kind="modal" id="8OS-ky-GAB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="EqU-xY-PNg" userLabel="Buttons">
-                                <rect key="frame" x="0.0" y="428" width="320" height="91"/>
+                                <rect key="frame" x="0.0" y="444" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ou1-Gz-WWS">
-                                        <rect key="frame" x="20" y="23" width="280" height="48"/>
+                                        <rect key="frame" x="20" y="7" width="280" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.10980392160000001" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.10980392156862745" green="0.6705882352941176" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
                                         <state key="normal" title="Create a Dropbox">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1766,6 +1804,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="agreeToTermsButton" destination="g6X-kR-qhz" id="s1T-uJ-3aY"/>
                         <outlet property="buttonsView" destination="EqU-xY-PNg" id="Fr8-OS-nDR"/>
                         <outlet property="emailField" destination="zWS-KF-UTD" id="wbM-Rw-eid"/>
                         <outlet property="firstNameField" destination="SBP-Ob-jAs" id="bgc-7F-i1c"/>
@@ -1799,7 +1838,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" id="nAT-k7-E39">
-                                <rect key="frame" x="16" y="64" width="288" height="7116"/>
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -2438,7 +2477,7 @@ Judicial forum for disputes. In the event that the agreement to arbitrate is fou
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Terms of Service" id="CeF-1x-m66">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="sAA-Yp-pdg">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="sAA-Yp-pdg">
                                             <connections>
                                                 <action selector="onDoneButton:" destination="HQv-UP-efs" id="fcc-w4-ke4"/>
                                             </connections>
@@ -2557,6 +2596,8 @@ Judicial forum for disputes. In the event that the agreement to arbitrate is fou
     <resources>
         <image name="avatar" width="87" height="87"/>
         <image name="banner_cropped" width="55" height="44"/>
+        <image name="check_box" width="20" height="20"/>
+        <image name="check_box_selected" width="20" height="20"/>
         <image name="checkbox_complete" width="24" height="24"/>
         <image name="checkbox_unchecked" width="23" height="23"/>
         <image name="chevron" width="13" height="21"/>
