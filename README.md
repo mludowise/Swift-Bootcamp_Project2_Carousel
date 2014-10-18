@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage views, view properties, and events to create a high fidelity prototype that is difficult to distinguish from a production app. We're going to use the techniques from this week to implement the Carousel app from the signed out state to the basic signed in state.
 
-Time Spent: 18 hours and counting...
+Time Spent: 20 hours
 
 Completed User Stories:
 * [x]	Static photo tiles on the initial screen
@@ -19,7 +19,7 @@ Completed User Stories:
 * [x]	Optional: Sign Up
   * [x]	Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
   * [x]	Optional: Tapping the Agree to Terms checkbox selects the checkbox.
-  * [ ]	Optional: Tapping on Terms shows a webview with the terms.
+  * [x]	Optional: Tapping on Terms shows a webview with the terms.
   * [x]	Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
   * [x] Optional: Clicking "Go" on keyboard submits form.
 * [x]	Tutorial Screens
