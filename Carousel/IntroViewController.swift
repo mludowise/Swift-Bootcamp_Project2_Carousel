@@ -37,12 +37,12 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     
     // Points represent the center of the image
     private var tileStartPositions : [CGPoint] = [
-        CGPoint(x: -33 + 153/2, y: 471 + 152/2),
-        CGPoint(x: 208 + 124/2, y: 473 + 122/2),
-        CGPoint(x: 181 + 128/2, y: 379 + 128/2),
-        CGPoint(x: 106 + 121/2, y: 478 + 121/2),
-        CGPoint(x: -14 + 124/2, y: 371 + 122/2),
-        CGPoint(x: 74 + 124/2, y: 386 + 123/2),
+        CGPoint(x: -33 + 153/2, y: 471 + 152/2 - 20),
+        CGPoint(x: 208 + 124/2, y: 473 + 122/2 - 20),
+        CGPoint(x: 181 + 128/2, y: 379 + 128/2 - 20),
+        CGPoint(x: 106 + 121/2, y: 478 + 121/2 - 20),
+        CGPoint(x: -14 + 124/2, y: 371 + 122/2 - 20),
+        CGPoint(x: 74 + 124/2, y: 386 + 123/2 - 20),
     ]
     private var tileEndPositions : [CGPoint] = []
     
