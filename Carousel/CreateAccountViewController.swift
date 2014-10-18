@@ -82,6 +82,9 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
             return
         }
         
+        userEmail = emailField.text
+        userPassword = passwordField.text
+        
         var alertView = UIAlertView(title: kCreatingAccountTtl, message: nil, delegate: self, cancelButtonTitle: nil)
         alertView.show()
         delay(2, { () -> () in
@@ -104,7 +107,6 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
             break
         default: // passwordField
             dismissKeyboard()
-            checkFields()
         }
         return true
     }

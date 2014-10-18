@@ -41,7 +41,7 @@ class ImageTimelineViewController: UIViewController {
         // Hide banner if all tasks have been completed
         if (checkIfCompletedAllGetStartedTasks()) {
             self.banner.hidden = true
-            self.scrollView.frame.origin.y = 0
+            adjustScrollViewForNoBanner()
         }
         
         // Center checkmark
@@ -55,11 +55,15 @@ class ImageTimelineViewController: UIViewController {
                 self.banner.frame.offset(dx: -self.banner.frame.width, dy: 0)
                 }, completion: { (b: Bool) -> Void in
                     UIView.animateWithDuration(0.25, animations: { () -> Void in
-                        self.scrollView.frame.origin.y -= self.banner.frame.height
-                        self.scrollView.frame.size.height += self.banner.frame.height
+                        self.adjustScrollViewForNoBanner()
                     })
             })
         }
+    }
+    
+    func adjustScrollViewForNoBanner() {
+        self.scrollView.frame.origin.y -= self.banner.frame.height
+        self.scrollView.frame.size.height += self.banner.frame.height
     }
     
     func showTaskCompletion(completion: (() -> Void)?) {

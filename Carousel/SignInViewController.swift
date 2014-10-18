@@ -8,9 +8,9 @@
 
 import UIKit
 
-// Corresponds to the ID given to this controller on the storyboard
-private let kEmail = "mel@melludowise.com"
-private let kPassword = "password"
+// Default email & password
+internal var userEmail = "mel@melludowise.com"
+internal var userPassword = "password"
 
 class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate, UIAlertViewDelegate {
 
@@ -63,9 +63,9 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
         alertView.show()
         delay(2, { () -> () in
             alertView.dismissWithClickedButtonIndex(0, animated: true)
-            if (self.emailTextField.text == kEmail && self.passwordTextField.text == kPassword) {
-                var welcomeViewControler = self.storyboard?.instantiateViewControllerWithIdentifier(kWelcomeViewControllerId) as UIViewController
-                self.presentViewController(welcomeViewControler, animated: true, completion: nil)
+            if (self.emailTextField.text == userEmail && self.passwordTextField.text == userPassword) {
+                var imageFeedViewController = self.storyboard?.instantiateViewControllerWithIdentifier(kImageFeedNavigationControllerID) as UINavigationController
+                self.presentViewController(imageFeedViewController, animated: true, completion: nil)
             } else {
                 alertView = UIAlertView(title: kSignInFailTtl, message: kSignInFailMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
                 alertView.show()

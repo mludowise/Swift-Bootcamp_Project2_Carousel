@@ -1604,7 +1604,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qq5-mV-ctE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vaa-fp-2aE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="imageTimelineNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Vaa-fp-2aE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="beG-ux-HVB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1687,7 +1687,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" usesAttributedText="YES" selectable="NO" id="tKg-Nb-gyp" userLabel="Help Text">
                                         <rect key="frame" x="11" y="20" width="298" height="72.5"/>
