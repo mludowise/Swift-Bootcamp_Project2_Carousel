@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // To detect return key
+        emailTextField.delegate = self
 
         // Remove navigation bar shadow
         navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -26,7 +29,13 @@ class ForgotPasswordViewController: UIViewController {
         emailTextField.becomeFirstResponder()
     }
 
-    @IBAction func onSendButton(sender: AnyObject) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+            view.endEditing(true)
+            submit()
+        return true
+    }
+    
+    func submit() {
         if (emailTextField.text == "") {
             var alertView = UIAlertView(title: kEmailRequiredTtl, message: kEmailRequiredMsg, delegate: self, cancelButtonTitle: kOkButtonTxt)
             alertView.show()
@@ -38,6 +47,10 @@ class ForgotPasswordViewController: UIViewController {
             alertView.dismissWithClickedButtonIndex(0, animated: true)
             self.navigationController?.popViewControllerAnimated(true)
         })
+    }
+    
+    @IBAction func onSendButton(sender: AnyObject) {
+        submit()
     }
     
     @IBAction func onBackButton(sender: AnyObject) {

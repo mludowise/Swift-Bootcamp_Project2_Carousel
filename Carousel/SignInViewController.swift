@@ -26,6 +26,8 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // To detect return key
+        emailTextField.delegate = self
         passwordTextField.delegate = self
         
         // Don't readjust the help text
@@ -61,8 +63,12 @@ class SignInViewController: MoveWithKeyboardViewController, UITextFieldDelegate,
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        checkPassword()
-        dismissKeyboard()
+        if (textField == emailTextField) {
+            passwordTextField.becomeFirstResponder()
+        } else { // passwordTextField
+            checkPassword()
+            dismissKeyboard()
+        }
         return true
     }
     

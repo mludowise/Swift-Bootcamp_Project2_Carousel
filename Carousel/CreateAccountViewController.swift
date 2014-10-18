@@ -26,8 +26,12 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
         // Don't readjust the help text
         automaticallyAdjustsScrollViewInsets = false
         
+        // To detect return key
+        firstNameField.delegate = self
+        lastNameField.delegate = self
+        emailField.delegate = self
         passwordField.delegate = self
-                
+        
         setupKeyboardMovement(inputsView, buttonsView: buttonsView, helpText: helpText, navigationBar: navigationBar)
     }
     
@@ -73,8 +77,17 @@ class CreateAccountViewController: MoveWithKeyboardViewController, UITextFieldDe
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        dismissKeyboard()
-        checkFields()
+        switch(textField) {
+        case firstNameField:
+            lastNameField.becomeFirstResponder()
+        case lastNameField:
+            emailField.becomeFirstResponder()
+        case emailField:
+            passwordField.becomeFirstResponder()
+        default: // passwordField
+            dismissKeyboard()
+            checkFields()
+        }
         return true
     }
     
